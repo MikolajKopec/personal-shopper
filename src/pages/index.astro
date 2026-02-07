@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Săn Style — Wietnamska Moda, Twój Styl">
@@ -8,25 +8,36 @@ import Layout from '../layouts/Layout.astro';
     <!-- Announcement Bar -->
     <div class="announcement-bar">
         <span class="announcement-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
             </svg>
         </span>
-        <span>Pierwsza grupa startuje w <strong>marcu 2025</strong>. Zostało <strong class="spots-counter">12 miejsc</strong>.</span>
+        <span
+            >Pierwsza grupa startuje w <strong>marcu 2025</strong>. Zostało <strong
+                class="spots-counter">12 miejsc</strong
+            >.</span
+        >
     </div>
 
     <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo">
+    <nav class="nav" id="mainNav">
+        <a href="#" class="nav-logo">
             <span class="logo-mark">山</span>
             <span class="logo-text">Săn Style</span>
-        </div>
+        </a>
         <div class="nav-links">
             <a href="#jak-to-dziala">Jak to działa</a>
             <a href="#przyklady">Przykłady</a>
             <a href="#faq">FAQ</a>
-            <a href="#formularz" class="nav-cta">Zapisz się</a>
+            <a href="#formularz" class="nav-cta"><span>Zapisz się</span></a>
         </div>
     </nav>
 
@@ -39,22 +50,24 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <h1 class="hero-title">
                 <span class="title-line">Jedwab w cenie</span>
-                <span class="title-line title-accent">poliestrowej bluzki</span>
+                <span class="title-line"
+                    ><span class="title-accent">poliestrowej bluzki</span></span
+                >
             </h1>
             <p class="hero-description">
-                Wietnamska stylistka dobiera dla Ciebie 5 kompletnych stylizacji z lokalnych butików. Naturalne tkaniny, unikatowe wzory, ręczne wykonanie — w cenach, które Cię zaskoczą.
+                Wietnamska stylistka dobiera dla Ciebie 5 kompletnych stylizacji
+                z lokalnych butików. Naturalne tkaniny, unikatowe wzory, ręczne
+                wykonanie — w cenach, które Cię zaskoczą.
             </p>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-value">~600 zł</span>
-                    <span class="stat-label">za kompletny fit</span>
+                    <span class="stat-value">Twój budżet</span>
+                    <span class="stat-label">Ty decydujesz</span>
                 </div>
-                <div class="stat-divider"></div>
                 <div class="stat">
                     <span class="stat-value">100%</span>
                     <span class="stat-label">naturalne tkaniny</span>
                 </div>
-                <div class="stat-divider"></div>
                 <div class="stat">
                     <span class="stat-value">0</span>
                     <span class="stat-label">osób w tym samym</span>
@@ -62,27 +75,41 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <a href="#formularz" class="hero-cta">
                 <span>Zarezerwuj miejsce</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
             </a>
-            <p class="hero-note">Zapisy do 20 lutego. Limit: 15 osób w pierwszej grupie.</p>
+            <p class="hero-note">
+                Zapisy do 20 lutego. Limit: 15 osób w pierwszej grupie.
+            </p>
         </div>
         <div class="hero-visual">
             <div class="hero-image-container">
-                <div class="hero-image" style="background-image: url('/img/hero.png')"></div>
+                <div
+                    class="hero-image"
+                    style="background-image: url('/img/hero.png')"
+                >
+                </div>
             </div>
             <div class="hero-comparison">
                 <div class="comparison-item comparison-them">
-                    <span class="comparison-brand">Zara / H&M</span>
+                    <span class="comparison-brand">Sieciówka</span>
                     <span class="comparison-material">Poliester, wiskoza</span>
-                    <span class="comparison-price">350-500 zł</span>
+                    <span class="comparison-price">Ta sama cena</span>
                 </div>
                 <div class="comparison-vs">vs</div>
                 <div class="comparison-item comparison-us">
                     <span class="comparison-brand">Wietnam</span>
-                    <span class="comparison-material">Jedwab, len, bawełna</span>
-                    <span class="comparison-price">~600 zł</span>
+                    <span class="comparison-material">Jedwab, len, bawełna</span
+                    >
+                    <span class="comparison-price">Lepsza jakość</span>
                 </div>
             </div>
         </div>
@@ -93,25 +120,50 @@ import Layout from '../layouts/Layout.astro';
         <div class="moodboard-container">
             <div class="moodboard-label">
                 <span>Wietnam</span>
+                <small>Hội An · Sài Gòn · Đà Nẵng</small>
             </div>
             <div class="moodboard-collage">
                 <div class="collage-item collage-1">
-                    <img src="/img/hoi_an_tailor_shop.png" alt="Krawiec w Hoi An">
+                    <img
+                        src="/img/hoi_an_tailor_shop.png"
+                        alt="Krawiec w Hoi An"
+                        loading="lazy"
+                    />
                 </div>
                 <div class="collage-item collage-2">
-                    <img src="/img/fabirc_market.png" alt="Targ tkanin">
+                    <img
+                        src="/img/fabirc_market.png"
+                        alt="Targ tkanin"
+                        loading="lazy"
+                    />
                 </div>
                 <div class="collage-item collage-3">
-                    <img src="/img/lanterns.png" alt="Latarnie w Hoi An">
+                    <img
+                        src="/img/lanterns.png"
+                        alt="Latarnie w Hoi An"
+                        loading="lazy"
+                    />
                 </div>
                 <div class="collage-item collage-4">
-                    <img src="/img/interior.png" alt="Wietnamski butik">
+                    <img
+                        src="/img/interior.png"
+                        alt="Wietnamski butik"
+                        loading="lazy"
+                    />
                 </div>
                 <div class="collage-item collage-5">
-                    <img src="/img/silk_making.png" alt="Tkanie jedwabiu">
+                    <img
+                        src="/img/silk_making.png"
+                        alt="Tkanie jedwabiu"
+                        loading="lazy"
+                    />
                 </div>
                 <div class="collage-item collage-6">
-                    <img src="/img/ho_chi_min_street_fashion.png" alt="Street fashion Ho Chi Minh">
+                    <img
+                        src="/img/ho_chi_min_street_fashion.png"
+                        alt="Street fashion Ho Chi Minh"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         </div>
@@ -126,7 +178,10 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="proof-divider"></div>
             <div class="proof-item">
-                <span class="proof-text">"Wietnamskie projektantki ubierają Beyoncé, Blackpink i Doja Cat"</span>
+                <span class="proof-text"
+                    >"Wietnamskie projektantki ubierają Beyoncé, Blackpink i
+                    Doja Cat"</span
+                >
                 <span class="proof-source">— Rest of World</span>
             </div>
         </div>
@@ -140,42 +195,82 @@ import Layout from '../layouts/Layout.astro';
                 <h2 class="section-title">Jak to działa?</h2>
             </div>
             <div class="process-intro">
-                <p>To nie jest quiz i algorytm. Pracujesz z prawdziwą stylistką, która rozumie modę i Twoje potrzeby. Razem tworzycie coś wyjątkowego.</p>
+                <p>
+                    To nie jest quiz i algorytm. Pracujesz z prawdziwą
+                    stylistką, która rozumie modę i Twoje potrzeby. Razem
+                    tworzycie coś wyjątkowego.
+                </p>
             </div>
 
             <div class="process-grid">
                 <div class="process-card">
                     <div class="process-card-number">1</div>
                     <h3>Poznajemy się</h3>
-                    <p>Krótka ankieta o Twoim stylu, okazjach i preferencjach. Podajesz podstawowe wymiary — wietnamskie rozmiary są inne niż europejskie.</p>
+                    <p>
+                        Krótka ankieta o Twoim stylu, okazjach i preferencjach.
+                        Podajesz podstawowe wymiary — wietnamskie rozmiary są
+                        inne niż europejskie.
+                    </p>
                     <div class="process-card-time">~10 min</div>
                 </div>
                 <div class="process-card">
                     <div class="process-card-number">2</div>
                     <h3>Wspólny moodboard</h3>
-                    <p>Stylistka przygotowuje wizualną koncepcję. Razem ją dopracowujecie — "więcej tego", "mniej tamtego" — aż powstanie wspólna wizja.</p>
+                    <p>
+                        Stylistka przygotowuje wizualną koncepcję. Razem ją
+                        dopracowujecie — "więcej tego", "mniej tamtego" — aż
+                        powstanie wspólna wizja.
+                    </p>
                     <div class="process-card-time">2-3 dni</div>
                 </div>
                 <div class="process-card">
                     <div class="process-card-number">3</div>
                     <h3>Iteracja nad fitami</h3>
-                    <p>Stylistka proponuje konkretne ubrania. Dajesz feedback, ona poprawia. Pracujecie razem, aż wszystkie 5 stylizacji będzie idealne.</p>
+                    <p>
+                        Stylistka proponuje konkretne ubrania. Dajesz feedback,
+                        ona poprawia. Pracujecie razem, aż wszystkie 5
+                        stylizacji będzie idealne.
+                    </p>
                     <div class="process-card-time">5-7 dni</div>
                 </div>
                 <div class="process-card">
                     <div class="process-card-number">4</div>
                     <h3>Paczka u Ciebie</h3>
-                    <p>Zamawiamy, importujemy, dostarczamy. Cło, VAT, logistyka — wszystko po naszej stronie. Ty tylko odbierasz i cieszysz się.</p>
-                    <div class="process-card-time">2-3 tyg.</div>
+                    <p>
+                        Zamawiamy, importujemy, dostarczamy. Cło, VAT, logistyka
+                        — wszystko po naszej stronie. Ty tylko odbierasz i
+                        cieszysz się.
+                    </p>
+                    <div class="process-card-time">do 7 dni roboczych*</div>
+                </div>
+                <div class="">
+                    <p>
+                        * Zależy nam na jak najszybszej dostawie, i płynnym
+                        procesie dlatego wszystkie nasze przesyłki są wysyłane
+                        lotniczo.
+                    </p>
                 </div>
             </div>
 
             <div class="process-note">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 16v-4M12 8h.01"/>
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 16v-4M12 8h.01"></path>
                 </svg>
-                <span>Po etapie konsultacji możesz zrezygnować — bez zobowiązań do zakupu ubrań.</span>
+                <span
+                    >Po etapie konsultacji możesz zrezygnować — bez zobowiązań
+                    do zakupu ubrań. <strong
+                        >Niezależnie od wszystkiego, wszystkie już stworzone
+                        fity będą na Ciebie czekać.</strong
+                    ></span
+                >
             </div>
         </div>
     </section>
@@ -191,7 +286,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="pricing-cards">
                 <div class="pricing-card pricing-card-service">
                     <div class="pricing-badge">Etap 1</div>
-                    <h3>Usługa stylistyczna</h3>
+                    <h3>Usługa <br /> stylistyczna</h3>
                     <div class="pricing-amount">
                         <span class="price">990</span>
                         <span class="currency">zł</span>
@@ -199,7 +294,7 @@ import Layout from '../layouts/Layout.astro';
                     <ul class="pricing-features">
                         <li>Konsultacja i poznanie Twojego stylu</li>
                         <li>Wspólny moodboard</li>
-                        <li>5 kompletnych propozycji stylizacji</li>
+                        <li>Do i5 kompletnych propozycji stylizacji</li>
                         <li>Iteracje aż do perfekcji</li>
                         <li>Możliwość rezygnacji po tym etapie</li>
                     </ul>
@@ -207,28 +302,22 @@ import Layout from '../layouts/Layout.astro';
 
                 <div class="pricing-card pricing-card-product">
                     <div class="pricing-badge">Etap 2</div>
-                    <h3>Twoje stylizacje</h3>
+                    <h3>Twoje <br />stylizacje</h3>
                     <div class="pricing-amount">
                         <span class="price-prefix">od</span>
-                        <span class="price">3000</span>
+                        <span class="price">2000</span>
                         <span class="currency">zł</span>
                     </div>
-                    <p class="pricing-note">Zależy od wybranych ubrań i Twojego budżetu</p>
-                    <div class="pricing-example">
-                        <span class="example-title">Przykład:</span>
-                        <div class="example-row">
-                            <span>5 fitów × ~600 zł</span>
-                            <span>3 000 zł</span>
-                        </div>
-                        <div class="example-row">
-                            <span>Import + logistyka</span>
-                            <span>~2 300 zł</span>
-                        </div>
-                        <div class="example-row example-total">
-                            <span>Razem</span>
-                            <span>~5 300 zł</span>
-                        </div>
-                    </div>
+                    <p class="pricing-note">
+                        Ty ustalasz budżet. Stylistka dobiera ubrania w jego
+                        ramach. Cena zawiera wszystko: ubrania, import, dostawę.
+                    </p>
+                    <ul class="pricing-features">
+                        <li>5 kompletnych stylizacji</li>
+                        <li>Import i odprawa celna</li>
+                        <li>Dostawa door-to-door</li>
+                        <li>Pełna kontrola nad wydatkami</li>
+                    </ul>
                 </div>
             </div>
 
@@ -237,21 +326,31 @@ import Layout from '../layouts/Layout.astro';
                 <div class="comparison-table">
                     <div class="comparison-row">
                         <span class="comparison-label">Sukienka jedwabna</span>
-                        <span class="comparison-other">COS / Massimo Dutti: 800-1200 zł</span>
-                        <span class="comparison-ours">Wietnam: ~400-600 zł</span>
+                        <span class="comparison-other"
+                            >COS / Massimo Dutti: 800-1200 zł</span
+                        >
+                        <span class="comparison-ours">Wietnam: ~400-600 zł</span
+                        >
                     </div>
                     <div class="comparison-row">
                         <span class="comparison-label">Lniana marynarka</span>
                         <span class="comparison-other">Zara: 500-700 zł</span>
-                        <span class="comparison-ours">Wietnam: ~300-450 zł</span>
+                        <span class="comparison-ours">Wietnam: ~300-450 zł</span
+                        >
                     </div>
                     <div class="comparison-row">
                         <span class="comparison-label">Bawełniana koszula</span>
-                        <span class="comparison-other">H&M Premium: 200-300 zł</span>
-                        <span class="comparison-ours">Wietnam: ~120-180 zł</span>
+                        <span class="comparison-other"
+                            >H&M Premium: 200-300 zł</span
+                        >
+                        <span class="comparison-ours">Wietnam: ~120-180 zł</span
+                        >
                     </div>
                 </div>
-                <p class="comparison-footnote">* Ceny w Wietnamie, przed importem. Finalna cena zawiera logistykę i marżę.</p>
+                <p class="comparison-footnote">
+                    * Orientacyjne ceny w wietnamskich butikach. Finalna cena
+                    zależy od Twojego budżetu.
+                </p>
             </div>
         </div>
     </section>
@@ -261,53 +360,95 @@ import Layout from '../layouts/Layout.astro';
         <div class="container">
             <div class="section-header">
                 <span class="section-number">03</span>
-                <h2 class="section-title">Jak może wyglądać Twoja stylizacja?</h2>
+                <h2 class="section-title">
+                    Jak może wyglądać Twoja stylizacja?
+                </h2>
             </div>
 
             <div class="examples-grid">
                 <div class="example-card">
                     <div class="example-image">
-                        <img src="/img/casual.png" alt="Minimalistyczny casual - len i bawełna">
+                        <img
+                            src="/img/casual.png"
+                            alt="Minimalistyczny casual - len i bawełna"
+                            loading="lazy"
+                        />
                     </div>
                     <div class="example-content">
-                        <span class="example-style">Minimalistyczny casual</span>
-                        <p>Len, bawełna, stonowane kolory. Na co dzień do pracy i po pracy.</p>
-                        <span class="example-price">~2 800 zł / 5 fitów</span>
+                        <span class="example-style">Minimalistyczny casual</span
+                        >
+                        <p>
+                            Len, bawełna, stonowane kolory. Na co dzień do pracy
+                            i po pracy.
+                        </p>
+                        <span class="example-price"
+                            >przykładowy budżet: 2 000 – 3 000 zł</span
+                        >
                     </div>
                 </div>
                 <div class="example-card">
                     <div class="example-image">
-                        <img src="/img/elegant.png" alt="Elegancki wieczorowy - jedwab i satyna">
+                        <img
+                            src="/img/elegant.png"
+                            alt="Elegancki wieczorowy - jedwab i satyna"
+                            loading="lazy"
+                        />
                     </div>
                     <div class="example-content">
                         <span class="example-style">Elegancki wieczorowy</span>
-                        <p>Jedwab, satyna, wyraziste kroje. Na wyjścia i okazje specjalne.</p>
-                        <span class="example-price">~3 500 zł / 5 fitów</span>
+                        <p>
+                            Jedwab, satyna, wyraziste kroje. Na wyjścia i okazje
+                            specjalne.
+                        </p>
+                        <span class="example-price"
+                            >przykładowy budżet: 3 000 – 5 000 zł</span
+                        >
                     </div>
                 </div>
                 <div class="example-card">
                     <div class="example-image">
-                        <img src="/img/boho.png" alt="Boho i artystyczny - wzory i tekstury">
+                        <img
+                            src="/img/boho.png"
+                            alt="Boho i artystyczny - wzory i tekstury"
+                            loading="lazy"
+                        />
                     </div>
                     <div class="example-content">
                         <span class="example-style">Boho & artystyczny</span>
-                        <p>Wzory, tekstury, warstwy. Dla odważnych, którzy chcą się wyróżnić.</p>
-                        <span class="example-price">~3 200 zł / 5 fitów</span>
+                        <p>
+                            Wzory, tekstury, warstwy. Dla odważnych, którzy chcą
+                            się wyróżnić.
+                        </p>
+                        <span class="example-price"
+                            >przykładowy budżet: 2 500 – 4 000 zł</span
+                        >
                     </div>
                 </div>
             </div>
 
-            <p class="examples-note">To przykładowe kierunki — Twoja stylizacja będzie dopasowana do Ciebie.</p>
+            <p class="examples-note">
+                To przykładowe kierunki — Twoja stylizacja będzie dopasowana do
+                Ciebie i Twojego budżetu.
+            </p>
         </div>
     </section>
 
     <!-- Personal Note Section -->
     <section class="personal-note">
         <div class="container">
-            <div class="note-content">
+            <div class="note-content animate-on-scroll">
                 <div class="note-quote">"</div>
-                <p class="note-text">Zakochaliśmy się w wietnamskiej modzie podczas podróży. Jakość, z jaką spotykaliśmy się w lokalnych butikach, była nieporównywalna z tym, co znamy z europejskich sieciówek — a ceny kilkukrotnie niższe.</p>
-                <p class="note-text">W marcu 2025 jedziemy do Wietnamu, żeby osobiście spotkać się ze stylistkami i butikami. Szukamy pierwszych 15 osób, które zaufają nam w tym eksperymencie.</p>
+                <p class="note-text">
+                    Zakochaliśmy się w wietnamskiej modzie podczas podróży.
+                    Jakość, z jaką spotykaliśmy się w lokalnych butikach, była
+                    nieporównywalna z tym, co znamy z europejskich sieciówek — a
+                    ceny kilkukrotnie niższe.
+                </p>
+                <p class="note-text">
+                    W marcu 2025 jedziemy do Wietnamu, żeby osobiście spotkać
+                    się ze stylistkami i butikami. Szukamy pierwszych 15 osób,
+                    które zaufają nam w tym eksperymencie.
+                </p>
                 <div class="note-signature">
                     <span class="signature-names">Mikołaj & Nikola</span>
                     <span class="signature-role">Założyciele Săn Style</span>
@@ -327,27 +468,51 @@ import Layout from '../layouts/Layout.astro';
             <div class="faq-grid">
                 <div class="faq-item">
                     <h4>Co jeśli ubrania nie będą pasować?</h4>
-                    <p>Dlatego zaczynamy od dokładnej ankiety z wymiarami. Stylistka dobiera rozmiary precyzyjnie, a w razie problemów pomagamy z wymianą.</p>
+                    <p>
+                        Dlatego zaczynamy od dokładnej ankiety z wymiarami.
+                        Stylistka dobiera rozmiary precyzyjnie, a w razie
+                        problemów pomagamy z wymianą.
+                    </p>
                 </div>
                 <div class="faq-item">
                     <h4>Czy muszę płacić cło i VAT?</h4>
-                    <p>Wszystkie koszty (cło, VAT, logistyka) są wliczone w cenę. Nie musisz się o nic martwić — paczka przyjeżdża "door to door".</p>
+                    <p>
+                        Wszystkie koszty (cło, VAT, logistyka) są wliczone w
+                        cenę. Nie musisz się o nic martwić — paczka przyjeżdża
+                        "door to door".
+                    </p>
                 </div>
                 <div class="faq-item">
                     <h4>Ile trwa dostawa?</h4>
-                    <p>Od momentu zamówienia ubrań do dostawy mija około 2-3 tygodnie. Cały proces (z konsultacją) to około 3-4 tygodnie.</p>
+                    <p>
+                        Od momentu zamówienia ubrań do dostawy mija około 2-3
+                        tygodnie. Cały proces (z konsultacją) to około 3-4
+                        tygodnie.
+                    </p>
                 </div>
                 <div class="faq-item">
                     <h4>Co jeśli mi się nie spodoba propozycja stylistki?</h4>
-                    <p>Pracujecie iteracyjnie — stylistka poprawia propozycje na podstawie Twojego feedbacku. Możesz też zrezygnować po etapie konsultacji.</p>
+                    <p>
+                        Pracujecie iteracyjnie — stylistka poprawia propozycje
+                        na podstawie Twojego feedbacku. Możesz też zrezygnować
+                        po etapie konsultacji.
+                    </p>
                 </div>
                 <div class="faq-item">
                     <h4>Czy mogę zwrócić ubrania?</h4>
-                    <p>Ze względu na charakter usługi (ubrania szyte/zamawiane dla Ciebie) standardowe zwroty nie są możliwe. Dlatego tak dużo uwagi poświęcamy etapowi konsultacji.</p>
+                    <p>
+                        Ze względu na charakter usługi (ubrania szyte/zamawiane
+                        dla Ciebie) standardowe zwroty nie są możliwe. Dlatego
+                        tak dużo uwagi poświęcamy etapowi konsultacji.
+                    </p>
                 </div>
                 <div class="faq-item">
                     <h4>Jakie rozmiary są dostępne?</h4>
-                    <p>Wietnamskie marki najlepiej obsługują rozmiary XS-L (EU 34-42) i wzrost 155-175 cm. Dla większych rozmiarów możliwości są ograniczone.</p>
+                    <p>
+                        Wietnamskie marki najlepiej obsługują rozmiary XS-L (EU
+                        34-42) i wzrost 155-175 cm. Dla większych rozmiarów
+                        możliwości są ograniczone.
+                    </p>
                 </div>
             </div>
         </div>
@@ -363,28 +528,56 @@ import Layout from '../layouts/Layout.astro';
                 <div class="form-header">
                     <div class="form-urgency">
                         <span class="urgency-badge">Limit miejsc</span>
-                        <span class="urgency-text">Pierwsza grupa: <strong>15 osób</strong>. Zostało: <strong class="spots-remaining">12</strong>.</span>
+                        <span class="urgency-text"
+                            >Pierwsza grupa: <strong>15 osób</strong>. Zostało: <strong
+                                class="spots-remaining">12</strong
+                            >.</span
+                        >
                     </div>
                     <h2>Zarezerwuj miejsce</h2>
-                    <p>Wypełnij krótki formularz. Jeśli wietnamskie rozmiary będą dla Ciebie odpowiednie, odezwiemy się z kolejnymi krokami.</p>
+                    <p>
+                        Wypełnij krótki formularz. Jeśli wietnamskie rozmiary
+                        będą dla Ciebie odpowiednie, odezwiemy się z kolejnymi
+                        krokami.
+                    </p>
                 </div>
 
                 <form class="signup-form" id="signupForm">
                     <div class="form-row">
                         <div class="form-field">
                             <label for="name">Imię *</label>
-                            <input type="text" id="name" name="name" required placeholder="Anna">
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="Anna"
+                            />
                         </div>
                         <div class="form-field">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="anna@example.com">
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="anna@example.com"
+                            />
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field">
                             <label for="height">Wzrost (cm) *</label>
-                            <input type="number" id="height" name="height" min="140" max="220" required placeholder="165">
+                            <input
+                                type="number"
+                                id="height"
+                                name="height"
+                                min="140"
+                                max="220"
+                                required
+                                placeholder="165"
+                            />
                         </div>
                         <div class="form-field">
                             <label for="size">Rozmiar *</label>
@@ -401,7 +594,9 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <div class="form-field">
-                        <label for="interest">Co Cię najbardziej interesuje?</label>
+                        <label for="interest"
+                            >Co Cię najbardziej interesuje?</label
+                        >
                         <select id="interest" name="interest">
                             <option value="">Wybierz (opcjonalne)</option>
                             <option value="casual">Na co dzień / casual</option>
@@ -413,29 +608,61 @@ import Layout from '../layouts/Layout.astro';
 
                     <button type="submit" class="form-submit">
                         <span>Zapisz mnie na listę</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                        >
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </button>
 
                     <div class="form-trust">
                         <div class="trust-item">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                ></path>
                             </svg>
                             <span>Dane chronione</span>
                         </div>
                         <div class="trust-item">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                ></path>
+                                <polyline points="22 4 12 14.01 9 11.01"
+                                ></polyline>
                             </svg>
                             <span>Zero spamu</span>
                         </div>
                         <div class="trust-item">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
                             </svg>
                             <span>Odpowiedź w 48h</span>
                         </div>
@@ -443,7 +670,11 @@ import Layout from '../layouts/Layout.astro';
                 </form>
 
                 <div class="form-footer">
-                    <p>Po zapisie wyślemy Ci krótką ankietę z dokładnymi wymiarami. Na jej podstawie ocenimy, czy wietnamskie rozmiary będą dla Ciebie idealne.</p>
+                    <p>
+                        Po zapisie wyślemy Ci krótką ankietę z dokładnymi
+                        wymiarami. Na jej podstawie ocenimy, czy wietnamskie
+                        rozmiary będą dla Ciebie idealne.
+                    </p>
                 </div>
             </div>
         </div>
@@ -452,13 +683,17 @@ import Layout from '../layouts/Layout.astro';
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo">
+            <a href="#" class="footer-logo">
                 <span class="logo-mark">山</span>
                 <span class="logo-text">Săn Style</span>
-            </div>
+            </a>
             <div class="footer-links">
                 <a href="mailto:hello@sanstyle.pl">hello@sanstyle.pl</a>
-                <a href="https://instagram.com/sanstyle.pl" target="_blank">Instagram</a>
+                <a
+                    href="https://instagram.com/sanstyle.pl"
+                    target="_blank"
+                    rel="noopener">Instagram</a
+                >
             </div>
             <div class="footer-copy">
                 <span>© 2025 Săn Style. Projekt w fazie walidacji.</span>
@@ -471,12 +706,22 @@ import Layout from '../layouts/Layout.astro';
         <div class="modal-backdrop"></div>
         <div class="modal-content">
             <div class="modal-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M20 6L9 17l-5-5"/>
+                <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                >
+                    <path d="M20 6L9 17l-5-5"></path>
                 </svg>
             </div>
             <h3>Jesteś na liście!</h3>
-            <p>Sprawdź email — wysłaliśmy Ci potwierdzenie i krótką ankietę z pytaniami o wymiary.</p>
+            <p>
+                Sprawdź email — wysłaliśmy Ci potwierdzenie i krótką ankietę z
+                pytaniami o wymiary.
+            </p>
             <p class="modal-note">Odezwiemy się w ciągu 48 godzin.</p>
             <button class="modal-close" id="closeModalBtn">Zamknij</button>
         </div>
@@ -485,32 +730,41 @@ import Layout from '../layouts/Layout.astro';
 
 <script>
     // ============================================
-    // SĂN STYLE — Landing Page Scripts
+    // SĂN STYLE — Enhanced Landing Page Scripts
     // ============================================
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener("DOMContentLoaded", () => {
         initSmoothScroll();
         initFormSubmission();
         initScrollAnimations();
-        initNavBackground();
+        initNavScroll();
         initCounterAnimation();
         initModalClose();
+        initFormFieldEffects();
+        initParallaxEffects();
     });
 
     // Smooth scroll for anchor links
     function initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                const href = this.getAttribute("href");
+                if (!href || href === "#") return;
+
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href')!);
+                const target = document.querySelector(href);
                 if (target) {
-                    const nav = document.querySelector('.nav') as HTMLElement;
+                    const nav = document.querySelector(".nav") as HTMLElement;
                     const navHeight = nav?.offsetHeight || 0;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                    const targetPosition =
+                        target.getBoundingClientRect().top +
+                        window.pageYOffset -
+                        navHeight -
+                        20;
 
                     window.scrollTo({
                         top: targetPosition,
-                        behavior: 'smooth'
+                        behavior: "smooth",
                     });
                 }
             });
@@ -519,26 +773,28 @@ import Layout from '../layouts/Layout.astro';
 
     // Form submission handling
     function initFormSubmission() {
-        const form = document.getElementById('signupForm') as HTMLFormElement;
-        const modal = document.getElementById('successModal');
+        const form = document.getElementById("signupForm") as HTMLFormElement;
 
         if (form) {
-            form.addEventListener('submit', async (e) => {
+            form.addEventListener("submit", async (e) => {
                 e.preventDefault();
 
                 const formData = new FormData(form);
                 const data = Object.fromEntries(formData.entries());
 
                 // Here you would typically send to your backend
-                console.log('Form submission:', data);
+                console.log("Form submission:", data);
 
                 // Simulate API call delay
-                const submitBtn = form.querySelector('.form-submit') as HTMLButtonElement;
+                const submitBtn = form.querySelector(
+                    ".form-submit",
+                ) as HTMLButtonElement;
                 const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<span>Wysyłanie...</span>';
+                submitBtn.innerHTML = "<span>Wysyłanie...</span>";
                 submitBtn.disabled = true;
+                submitBtn.style.pointerEvents = "none";
 
-                await new Promise(resolve => setTimeout(resolve, 800));
+                await new Promise((resolve) => setTimeout(resolve, 1000));
 
                 // Update signup counter
                 updateSignupCounter();
@@ -550,22 +806,25 @@ import Layout from '../layouts/Layout.astro';
                 form.reset();
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
+                submitBtn.style.pointerEvents = "";
             });
         }
     }
 
     // Update signup counter after form submission
     function updateSignupCounter() {
-        const counter = document.getElementById('signupCount');
+        const counter = document.getElementById("signupCount");
         if (counter) {
-            const currentCount = parseInt(counter.textContent || '0');
-            counter.textContent = String(currentCount + 1);
+            const currentCount = parseInt(counter.textContent || "0");
+            animateNumber(counter, currentCount, currentCount + 1, 600);
         }
 
         // Update remaining spots
-        const spotsElements = document.querySelectorAll('.spots-remaining, .spots-counter');
-        spotsElements.forEach(el => {
-            const current = parseInt(el.textContent || '0');
+        const spotsElements = document.querySelectorAll(
+            ".spots-remaining, .spots-counter",
+        );
+        spotsElements.forEach((el) => {
+            const current = parseInt(el.textContent || "0");
             if (current > 0) {
                 el.textContent = String(current - 1);
             }
@@ -574,35 +833,39 @@ import Layout from '../layouts/Layout.astro';
 
     // Modal functions
     function showModal() {
-        const modal = document.getElementById('successModal');
+        const modal = document.getElementById("successModal");
         if (modal) {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
         }
     }
 
     function closeModal() {
-        const modal = document.getElementById('successModal');
+        const modal = document.getElementById("successModal");
         if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
         }
     }
 
     function initModalClose() {
         // Close button
-        document.getElementById('closeModalBtn')?.addEventListener('click', closeModal);
+        document
+            .getElementById("closeModalBtn")
+            ?.addEventListener("click", closeModal);
 
         // Close on backdrop click
-        document.addEventListener('click', (e) => {
-            if ((e.target as HTMLElement).classList.contains('modal-backdrop')) {
+        document.addEventListener("click", (e) => {
+            if (
+                (e.target as HTMLElement).classList.contains("modal-backdrop")
+            ) {
                 closeModal();
             }
         });
 
         // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
                 closeModal();
             }
         });
@@ -611,83 +874,108 @@ import Layout from '../layouts/Layout.astro';
     // Scroll-triggered animations using Intersection Observer
     function initScrollAnimations() {
         // Check for reduced motion preference
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.hero-content, .hero-visual, .process-card, .pricing-card, .example-card, .faq-item').forEach(el => {
-                (el as HTMLElement).style.opacity = '1';
-                (el as HTMLElement).style.transform = 'none';
-            });
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            document
+                .querySelectorAll(
+                    ".process-card, .pricing-card, .example-card, .faq-item, .animate-on-scroll",
+                )
+                .forEach((el) => {
+                    (el as HTMLElement).style.opacity = "1";
+                    (el as HTMLElement).style.transform = "none";
+                });
             return;
         }
 
         const observerOptions = {
             root: null,
-            rootMargin: '0px 0px -50px 0px',
-            threshold: 0.1
+            rootMargin: "0px 0px -80px 0px",
+            threshold: 0.1,
         };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
+                    entry.target.classList.add("in-view");
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
         const animatedElements = document.querySelectorAll(
-            '.hero-content, .hero-visual, .process-card, .pricing-card, .example-card, .faq-item'
+            ".process-card, .pricing-card, .example-card, .faq-item, .animate-on-scroll",
         );
 
-        animatedElements.forEach(el => {
+        animatedElements.forEach((el) => {
             observer.observe(el);
         });
     }
 
-    // Navigation background on scroll
-    function initNavBackground() {
-        const nav = document.querySelector('.nav') as HTMLElement;
+    // Navigation scroll effects
+    function initNavScroll() {
+        const nav = document.getElementById("mainNav");
+        if (!nav) return;
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
+        let lastScroll = 0;
+        let ticking = false;
 
-            if (currentScroll > 50) {
-                nav.style.boxShadow = '0 2px 20px rgba(44, 40, 37, 0.08)';
-            } else {
-                nav.style.boxShadow = 'none';
+        window.addEventListener("scroll", () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const currentScroll = window.pageYOffset;
+
+                    if (currentScroll > 50) {
+                        nav.classList.add("scrolled");
+                    } else {
+                        nav.classList.remove("scrolled");
+                    }
+
+                    lastScroll = currentScroll;
+                    ticking = false;
+                });
+                ticking = true;
             }
         });
     }
 
     // Animate counter on scroll into view
     function initCounterAnimation() {
-        const counter = document.getElementById('signupCount');
+        const counter = document.getElementById("signupCount");
         if (!counter) return;
 
-        const targetNumber = parseInt(counter.textContent || '0');
+        const targetNumber = parseInt(counter.textContent || "0");
         let hasAnimated = false;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !hasAnimated) {
-                    hasAnimated = true;
-                    animateNumber(counter, 0, targetNumber, 1500);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        hasAnimated = true;
+                        animateNumber(counter, 0, targetNumber, 1800);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.5 },
+        );
 
         observer.observe(counter);
     }
 
-    function animateNumber(element: HTMLElement, start: number, end: number, duration: number) {
+    function animateNumber(
+        element: HTMLElement,
+        start: number,
+        end: number,
+        duration: number,
+    ) {
         const startTime = performance.now();
 
         function update(currentTime: number) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
 
-            // Ease out cubic
-            const easeOut = 1 - Math.pow(1 - progress, 3);
+            // Ease out expo
+            const easeOut =
+                progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
             const current = Math.floor(start + (end - start) * easeOut);
 
             element.textContent = String(current);
@@ -701,18 +989,61 @@ import Layout from '../layouts/Layout.astro';
     }
 
     // Form field focus effects
-    document.querySelectorAll('.form-field input, .form-field select').forEach(field => {
-        field.addEventListener('focus', function(this: HTMLElement) {
-            this.parentElement?.classList.add('focused');
-        });
+    function initFormFieldEffects() {
+        document
+            .querySelectorAll(".form-field input, .form-field select")
+            .forEach((field) => {
+                // Check initial state
+                const input = field as HTMLInputElement;
+                if (input.value) {
+                    input.parentElement?.classList.add("filled");
+                }
 
-        field.addEventListener('blur', function(this: HTMLInputElement) {
-            this.parentElement?.classList.remove('focused');
-            if (this.value) {
-                this.parentElement?.classList.add('filled');
-            } else {
-                this.parentElement?.classList.remove('filled');
-            }
-        });
-    });
+                field.addEventListener("focus", function (this: HTMLElement) {
+                    this.parentElement?.classList.add("focused");
+                });
+
+                field.addEventListener(
+                    "blur",
+                    function (this: HTMLInputElement) {
+                        this.parentElement?.classList.remove("focused");
+                        if (this.value) {
+                            this.parentElement?.classList.add("filled");
+                        } else {
+                            this.parentElement?.classList.remove("filled");
+                        }
+                    },
+                );
+            });
+    }
+
+    // Subtle parallax effects
+    function initParallaxEffects() {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+            return;
+
+        const heroImage = document.querySelector(
+            ".hero-image-container",
+        ) as HTMLElement;
+
+        if (heroImage) {
+            let ticking = false;
+
+            window.addEventListener("scroll", () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const scrolled = window.pageYOffset;
+                        const rate = scrolled * 0.15;
+
+                        if (scrolled < window.innerHeight) {
+                            heroImage.style.transform = `translateY(${rate}px)`;
+                        }
+
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+    }
 </script>
