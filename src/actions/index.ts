@@ -12,6 +12,7 @@ export const server = {
       email: z.string().email('Podaj prawidłowy adres email'),
       instagram: z.string().optional(),
       source: z.enum(['tiktok', 'instagram', 'friend', 'other', '']).optional(),
+      consent: z.literal('on', { errorMap: () => ({ message: 'Zgoda na przetwarzanie danych jest wymagana' }) }),
     }),
     handler: async ({ name, email, instagram, source }) => {
       const sourceLabels: Record<string, string> = {

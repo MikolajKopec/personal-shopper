@@ -1079,6 +1079,30 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                 </div>
 
+                <div class="mb-8">
+                    <label
+                        class="flex items-start gap-3 cursor-pointer group"
+                    >
+                        <input
+                            type="checkbox"
+                            name="consent"
+                            required
+                            aria-required="true"
+                            class="mt-0.5 w-5 h-5 border-stone text-brass rounded focus:ring-brass/20 focus:ring-4 cursor-pointer flex-shrink-0"
+                        />
+                        <span class="text-[0.8125rem] text-warm-gray leading-relaxed">
+                            Wyrażam zgodę na przetwarzanie moich danych osobowych
+                            w celu kontaktu i realizacji usługi stylistycznej.
+                            <a
+                                href="/polityka-prywatnosci"
+                                target="_blank"
+                                class="text-brass underline underline-offset-2 hover:text-brass-dark transition-colors"
+                                >Polityka prywatności</a
+                            > *
+                        </span>
+                    </label>
+                </div>
+
                 <button
                     type="submit"
                     class="btn-fill w-full flex items-center justify-center gap-4 py-5 px-10 bg-espresso text-ivory text-base font-medium tracking-wide rounded-full transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(184,149,110,0.3)]"
