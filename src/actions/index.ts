@@ -30,11 +30,6 @@ export const server = {
         email,
         firstName: name,
         unsubscribed: false,
-        properties: {
-          instagram: instagram || '',
-          source: sourceDisplay,
-          signupDate: now,
-        },
       });
 
       if (contactError) {
