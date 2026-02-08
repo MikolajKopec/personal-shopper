@@ -1,4 +1,4 @@
-import { defineAction } from 'astro:actions';
+import { defineAction, ActionError } from 'astro:actions';
 import { z } from 'astro/zod';
 import { Resend } from 'resend';
 
@@ -25,7 +25,7 @@ export const server = {
       const instagramDisplay = instagram || '—';
       const now = new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' });
 
-      await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: 'Săn Style <onboarding@resend.dev>',
         to: import.meta.env.NOTIFICATION_EMAIL,
         subject: `Nowy zapis: ${name} (${email})`,
@@ -56,6 +56,13 @@ export const server = {
           </div>
         `,
       });
+
+      if (error) {
+        throw new ActionError({
+          code: 'INTERNAL_SERVER_ERROR',
+          message: `Nie udało się wysłać emaila: ${error.message}`,
+        });
+      }
 
       return { success: true };
     },
