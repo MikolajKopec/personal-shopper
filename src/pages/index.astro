@@ -4,10 +4,11 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Săn Style — Personal Styling z Wietnamu">
     <div class="grain-overlay"></div>
-
     <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <span class="announcement-icon">
+    <div
+        class="announcement-shimmer relative bg-ink text-sand py-2 px-6 text-center text-[0.8125rem] flex items-center justify-center gap-4 overflow-hidden"
+    >
+        <span class="text-brass flex animate-pulse">
             <svg
                 width="16"
                 height="16"
@@ -20,63 +21,161 @@ import Layout from "../layouts/Layout.astro";
                 <path d="M12 6v6l4 2"></path>
             </svg>
         </span>
-        <span
-            >Pierwsza grupa startuje w <strong>marcu 2026</strong>. Zostało <strong
-                class="spots-counter">12 miejsc</strong
+        <span class="relative z-10"
+            >Pierwsza grupa startuje w <strong class="text-brass-light"
+                >marcu 2026</strong
+            >. Zostało <strong class="spots-counter text-brass-light"
+                >12 miejsc</strong
             >.</span
         >
     </div>
 
     <!-- Navigation -->
-    <nav class="nav" id="mainNav">
-        <a href="#" class="nav-logo">
-            <span class="logo-mark">山</span>
-            <span class="logo-text">Săn Style</span>
+    <nav
+        class="sticky top-0 z-[1000] flex items-center gap-10 py-4 px-[clamp(1.5rem,5vw,4rem)] bg-ivory/85 backdrop-blur-xl border-b border-transparent transition-all duration-[0.4s] ease-out-expo"
+        id="mainNav"
+    >
+        <a href="#" class="flex items-center gap-2 mr-auto group">
+            <span
+                class="text-[1.75rem] text-brass font-light transition-transform duration-[0.4s] ease-out-expo group-hover:-rotate-[5deg] group-hover:scale-110"
+                >山</span
+            >
+            <span class="font-display text-[1.375rem] font-medium tracking-wide"
+                >Săn Style</span
+            >
         </a>
-        <div class="nav-links">
-            <a href="#jak-to-dziala">Jak to działa</a>
-            <a href="#przyklady">Przykłady</a>
-            <a href="#faq">FAQ</a>
-            <a href="#formularz" class="nav-cta"><span>Zapisz się</span></a>
+        <button
+            class="hamburger flex md:hidden flex-col justify-center gap-[5px] w-8 h-8 p-1 z-10"
+            id="navHamburger"
+            aria-label="Menu"
+        >
+            <span
+                class="block w-full h-[2px] bg-espresso rounded-sm transition-all duration-[0.4s] ease-out-expo"
+            ></span>
+            <span
+                class="block w-full h-[2px] bg-espresso rounded-sm transition-all duration-[0.4s] ease-out-expo"
+            ></span>
+            <span
+                class="block w-full h-[2px] bg-espresso rounded-sm transition-all duration-[0.4s] ease-out-expo"
+            ></span>
+        </button>
+        <div class="nav-links flex items-center gap-10" id="navLinks">
+            <a
+                href="#jak-to-dziala"
+                class="nav-underline relative text-sm font-medium transition-colors duration-200 ease-out-expo hover:text-brass-dark"
+                >Jak to działa</a
+            >
+            <a
+                href="#przyklady"
+                class="nav-underline relative text-sm font-medium transition-colors duration-200 ease-out-expo hover:text-brass-dark"
+                >Przykłady</a
+            >
+            <a
+                href="#faq"
+                class="nav-underline relative text-sm font-medium transition-colors duration-200 ease-out-expo hover:text-brass-dark"
+                >FAQ</a
+            >
         </div>
+        <a
+            href="#formularz"
+            class="hidden md:inline-flex btn-fill btn-fill-y py-2 px-6 bg-espresso text-ivory !text-ivory rounded-full transition-all duration-[0.4s] ease-out-expo hover:-translate-y-0.5 hover:shadow-brand-md"
+        >
+            <span class="relative z-10">Zapisz się</span>
+        </a>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-tagline">
-                <span class="tagline-line"></span>
-                <span>Personal styling z Wietnamu</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="title-line">Jedwab w cenie</span>
-                <span class="title-line"
-                    ><span class="title-accent">poliestrowej bluzki</span></span
+    <section
+        class="min-h-[calc(100vh-120px)] grid grid-cols-1 lg:grid-cols-2 gap-16 py-16 lg:py-24 px-[clamp(1.5rem,5vw,4rem)] max-w-[1400px] mx-auto items-center"
+        id="main-content"
+    >
+        <div
+            class="flex flex-col justify-center text-center lg:text-left items-center lg:items-start order-2 lg:order-1"
+        >
+            <!-- Tagline -->
+            <div class="flex items-center gap-4 mb-6 overflow-hidden">
+                <span
+                    class="motion-safe-only h-px bg-brass w-0 animate-expand-line"
+                ></span>
+                <span
+                    class="motion-safe-only text-xs font-medium tracking-[0.2em] uppercase text-brass opacity-0 -translate-x-5 animate-fade-slide-in"
+                    >Personal styling z Wietnamu</span
                 >
+            </div>
+            <!-- Title -->
+            <h1
+                class="font-display font-normal text-[clamp(2.5rem,6vw,4.5rem)] mb-6 overflow-hidden"
+            >
+                <span
+                    class="motion-safe-only block opacity-0 translate-y-full animate-reveal-up"
+                    >Ubrania dobrane</span
+                >
+                <span
+                    class="motion-safe-only block opacity-0 translate-y-full animate-reveal-up-2"
+                >
+                    <span class="title-accent relative italic text-brass-dark"
+                        >tylko dla Ciebie</span
+                    >
+                </span>
             </h1>
-            <p class="hero-description">
+            <!-- Description -->
+            <p
+                class="motion-safe-only text-lg leading-relaxed text-warm-gray max-w-[480px] mb-10 opacity-0 translate-y-5 animate-fade-slide-up"
+            >
                 Twoja osobista stylistka z Wietnamu dobierze dla Ciebie
-                kompletne stylizacje z lokalnych butików — jedwab, len,
-                bawełna, ręczne wykonanie. Takie same tkaniny, za które
-                w Zarze zapłacisz trzy razy więcej.
+                kompletne stylizacje z lokalnych butików — jedwab, len, bawełna
+                organiczna. Każdy zestaw jest unikatowy, szyty z myślą o Tobie.
+                Żadnych sieciówek, żadnej masówki.
             </p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-value">od 990 zł</span>
-                    <span class="stat-label">usługa stylistyczna</span>
+            <!-- Stats -->
+            <div
+                class="motion-safe-only flex flex-wrap justify-center lg:justify-start gap-6 lg:gap-10 mb-10 py-5 border-y border-stone opacity-0 animate-fade-in w-full"
+            >
+                <div
+                    class="flex flex-col gap-1 min-w-[120px] sm:min-w-0 text-center sm:text-left p-3 sm:p-0 bg-sand sm:bg-transparent rounded"
+                >
+                    <span
+                        class="font-display text-[1.75rem] text-espresso leading-none"
+                        >0</span
+                    >
+                    <span
+                        class="text-[0.6875rem] text-warm-gray uppercase tracking-wider"
+                        >osób w tym samym</span
+                    >
                 </div>
-                <div class="stat">
-                    <span class="stat-value">100%</span>
-                    <span class="stat-label">naturalne tkaniny</span>
+                <div
+                    class="flex flex-col gap-1 min-w-[120px] sm:min-w-0 text-center sm:text-left p-3 sm:p-0 bg-sand sm:bg-transparent rounded"
+                >
+                    <span
+                        class="font-display text-[1.75rem] text-espresso leading-none"
+                        >100%</span
+                    >
+                    <span
+                        class="text-[0.6875rem] text-warm-gray uppercase tracking-wider"
+                        >ręcznie dobrane</span
+                    >
                 </div>
-                <div class="stat">
-                    <span class="stat-value">0</span>
-                    <span class="stat-label">osób w tym samym</span>
+                <div
+                    class="flex flex-col gap-1 min-w-[120px] sm:min-w-0 text-center sm:text-left p-3 sm:p-0 bg-sand sm:bg-transparent rounded"
+                >
+                    <span
+                        class="font-display text-[1.75rem] text-espresso leading-none"
+                        >1 na 1</span
+                    >
+                    <span
+                        class="text-[0.6875rem] text-warm-gray uppercase tracking-wider"
+                        >osobista stylistka</span
+                    >
                 </div>
             </div>
-            <a href="#formularz" class="hero-cta">
-                <span>Chcę to sprawdzić</span>
+            <!-- CTA -->
+            <a
+                href="#formularz"
+                class="motion-safe-only btn-fill inline-flex items-center gap-4 py-5 px-10 bg-espresso text-ivory text-[0.9375rem] font-medium tracking-wide rounded-full w-fit opacity-0 translate-y-5 animate-fade-in-cta transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(184,149,110,0.25)]"
+            >
+                <span class="relative z-10">Chcę to sprawdzić</span>
                 <svg
+                    class="relative z-10 transition-transform duration-[0.4s] ease-out-expo group-hover:translate-x-1"
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"
@@ -87,174 +186,310 @@ import Layout from "../layouts/Layout.astro";
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
             </a>
-            <p class="hero-note">
+            <p
+                class="motion-safe-only mt-4 text-[0.8125rem] text-warm-gray opacity-0 animate-fade-in-note"
+            >
                 Zapisy do końca lutego. Limit: 15 osób w pierwszej grupie.
             </p>
         </div>
-        <div class="hero-visual">
-            <div class="hero-image-container">
-                <div
-                    class="hero-image"
-                    style="background-image: url('/img/hero.png')"
-                >
-                </div>
+        <!-- Hero Visual -->
+        <div
+            class="motion-safe-only flex flex-col gap-6 opacity-0 translate-x-10 animate-slide-in-right order-1 lg:order-2 max-w-[450px] lg:max-w-none mx-auto lg:mx-0"
+        >
+            <div
+                class="hero-frame aspect-[4/5] max-h-[520px] relative overflow-visible"
+            >
+                <img
+                    class="w-full h-full object-cover object-center grayscale-[15%] contrast-[1.05] transition-all duration-700 ease-out-expo hover:grayscale-0 hover:contrast-100 hover:scale-[1.02]"
+                    src="/img/hero.png"
+                    alt="Stylizacja z wietnamskiego butiku — jedwab i len w naturalnych kolorach"
+                    width="600"
+                    height="750"
+                />
             </div>
-            <div class="hero-comparison">
-                <div class="comparison-item comparison-them">
-                    <span class="comparison-brand">Sieciówka w Polsce</span>
-                    <span class="comparison-material">Poliester, wiskoza, masówka</span>
-                    <span class="comparison-price">400–800 zł</span>
-                </div>
-                <div class="comparison-vs">vs</div>
-                <div class="comparison-item comparison-us">
-                    <span class="comparison-brand">Săn Style</span>
-                    <span class="comparison-material">Jedwab, len, bawełna organiczna</span
+            <!-- Comparison -->
+            <div
+                class="flex flex-col sm:flex-row items-stretch rounded-lg overflow-hidden relative"
+            >
+                <div class="flex-1 bg-stone p-5 flex flex-col gap-1.5">
+                    <span
+                        class="text-[0.625rem] font-semibold uppercase tracking-[0.15em] opacity-60"
+                        >Sieciówka</span
                     >
-                    <span class="comparison-price">Ta sama cena, inna liga</span>
+                    <span class="text-[0.8125rem]"
+                        >Poliester, masówka, wszyscy w tym samym</span
+                    >
+                    <span class="font-display text-xl font-medium mt-auto"
+                        >Algorytm wybiera za Ciebie</span
+                    >
+                </div>
+                <div
+                    class="comparison-vs-badge w-9 h-9 bg-ivory rounded-full flex items-center justify-center text-[0.6875rem] font-bold text-taupe uppercase shadow-brand-md z-10 max-sm:relative max-sm:mx-auto max-sm:-my-2 max-sm:left-auto max-sm:top-auto max-sm:transform-none"
+                >
+                    vs
+                </div>
+                <div
+                    class="flex-1 bg-espresso text-ivory p-5 flex flex-col gap-1.5"
+                >
+                    <span
+                        class="text-[0.625rem] font-semibold uppercase tracking-[0.15em] opacity-60"
+                        >Săn Style</span
+                    >
+                    <span class="text-[0.8125rem]"
+                        >Jedwab, len, bawełna — unikatowe zestawy</span
+                    >
+                    <span
+                        class="font-display text-xl font-medium mt-auto text-brass-light"
+                        >Stylistka dobiera dla Ciebie</span
+                    >
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Vietnam Moodboard -->
-    <section class="vietnam-moodboard">
-        <div class="moodboard-container">
-            <div class="moodboard-label">
-                <span>Wietnam</span>
-                <small>Hội An · Sài Gòn · Đà Nẵng</small>
+    <section
+        class="moodboard-line relative bg-sand py-24 sm:py-40 px-[clamp(1.5rem,5vw,4rem)] overflow-hidden"
+    >
+        <div class="max-w-[1100px] mx-auto relative">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-ivory py-4 px-8 sm:px-16 shadow-brand-lg text-center max-sm:relative max-sm:top-auto max-sm:left-auto max-sm:translate-x-0 max-sm:translate-y-0 max-sm:mb-6 max-sm:shadow-none max-sm:bg-transparent max-sm:p-0"
+            >
+                <span
+                    class="font-display text-[1.75rem] max-sm:text-xl italic text-brass-dark tracking-wider block"
+                    >Wietnam</span
+                >
+                <small
+                    class="text-[0.6875rem] uppercase tracking-[0.2em] text-warm-gray mt-1 block"
+                    >Hội An · Sài Gòn · Đà Nẵng</small
+                >
             </div>
-            <div class="moodboard-collage">
-                <div class="collage-item collage-1">
+            <div
+                class="grid grid-cols-2 sm:grid-cols-12 sm:grid-rows-[130px_130px_130px] gap-1 sm:gap-0"
+            >
+                <div
+                    class="collage-polaroid relative overflow-hidden cursor-pointer sm:col-[1/5] sm:row-[1/3] sm:rotate-[-2deg] shadow-brand-md sm:z-[3]"
+                >
                     <img
                         src="/img/hoi_an_tailor_shop.png"
                         alt="Krawiec w Hoi An"
                         loading="lazy"
+                        width="400"
+                        height="300"
+                        class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo hover:scale-[1.08] hover:grayscale-0"
                     />
                 </div>
-                <div class="collage-item collage-2">
+                <div
+                    class="collage-polaroid relative overflow-hidden cursor-pointer sm:col-[4/7] sm:row-[1/2] sm:rotate-[1deg] sm:translate-y-4 shadow-brand-md sm:z-[2]"
+                >
                     <img
                         src="/img/fabirc_market.png"
                         alt="Targ tkanin"
                         loading="lazy"
+                        width="400"
+                        height="300"
+                        class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo hover:scale-[1.08] hover:grayscale-0"
                     />
                 </div>
-                <div class="collage-item collage-3">
+                <div
+                    class="collage-polaroid relative overflow-hidden cursor-pointer sm:col-[6/10] sm:row-[1/3] sm:rotate-[2deg] sm:-translate-x-4 shadow-brand-md sm:z-[4]"
+                >
                     <img
                         src="/img/lanterns.png"
                         alt="Latarnie w Hoi An"
                         loading="lazy"
+                        width="400"
+                        height="300"
+                        class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo hover:scale-[1.08] hover:grayscale-0"
                     />
                 </div>
-                <div class="collage-item collage-4">
+                <div
+                    class="collage-polaroid relative overflow-hidden cursor-pointer sm:col-[9/13] sm:row-[1/2] sm:rotate-[-1deg] sm:translate-y-5 shadow-brand-md sm:z-[1]"
+                >
                     <img
                         src="/img/interior.png"
                         alt="Wietnamski butik"
                         loading="lazy"
+                        width="400"
+                        height="300"
+                        class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo hover:scale-[1.08] hover:grayscale-0"
                     />
                 </div>
-                <div class="collage-item collage-5">
+                <div
+                    class="collage-polaroid relative overflow-hidden cursor-pointer sm:col-[2/6] sm:row-[2/4] sm:rotate-[1.5deg] sm:-translate-y-6 shadow-brand-md sm:z-[5] max-sm:hidden"
+                >
                     <img
                         src="/img/silk_making.png"
                         alt="Tkanie jedwabiu"
                         loading="lazy"
+                        width="400"
+                        height="300"
+                        class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo hover:scale-[1.08] hover:grayscale-0"
                     />
                 </div>
-                <div class="collage-item collage-6">
+                <div
+                    class="collage-polaroid relative overflow-hidden cursor-pointer sm:col-[8/12] sm:row-[2/4] sm:rotate-[-2deg] sm:-translate-y-5 shadow-brand-md sm:z-[6] max-sm:hidden"
+                >
                     <img
                         src="/img/ho_chi_min_street_fashion.png"
                         alt="Street fashion Ho Chi Minh"
                         loading="lazy"
+                        width="400"
+                        height="300"
+                        class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo hover:scale-[1.08] hover:grayscale-0"
                     />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof Bar -->
-    <section class="social-proof-bar">
-        <div class="proof-content">
-            <div class="proof-item">
-                <span class="proof-number" id="signupCount">47</span>
-                <span class="proof-label">osób na liście oczekujących</span>
-            </div>
-            <div class="proof-divider"></div>
-            <div class="proof-item">
-                <span class="proof-text"
-                    >"Wietnam staje się nowym hubem azjatyckiej mody —
-                    projektanci ubierają Beyoncé i Blackpink"</span
+    <!-- How It Works — 01 -->
+    <section
+        class="py-24 sm:py-40 px-[clamp(1.5rem,5vw,4rem)] bg-ivory"
+        id="jak-to-dziala"
+    >
+        <div class="max-w-container mx-auto">
+            <div class="flex items-baseline gap-6 mb-16">
+                <span
+                    class="font-display text-sm italic text-brass tracking-wider"
+                    >01</span
                 >
-                <span class="proof-source">— Rest of World</span>
+                <h2
+                    class="font-display font-normal text-[clamp(2rem,4vw,3rem)]"
+                >
+                    Jak to działa?
+                </h2>
             </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="process" id="jak-to-dziala">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">01</span>
-                <h2 class="section-title">Jak to działa?</h2>
-            </div>
-            <div class="process-intro">
-                <p>
+            <div class="max-w-[650px] mb-16">
+                <p
+                    class="font-display text-xl italic leading-relaxed text-espresso"
+                >
                     Żadnych quizów, żadnych algorytmów. Pracujesz z prawdziwą
                     stylistką, która rozumie azjatycką modę i Twoje potrzeby.
-                    Cały proces jest prosty — a na koniec dostajesz paczkę
-                    pod drzwi.
+                    Cały proces jest prosty — a na koniec dostajesz paczkę pod
+                    drzwi.
                 </p>
             </div>
 
-            <div class="process-grid">
-                <div class="process-card">
-                    <div class="process-card-number">1</div>
-                    <h3>Opowiedz o sobie</h3>
-                    <p>
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-16"
+            >
+                <div
+                    class="card-top-line animate-card stagger-1 bg-sand p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-2 hover:shadow-brand-lg"
+                >
+                    <div
+                        class="absolute top-6 right-6 font-display text-[4rem] text-brass opacity-15 leading-none transition-opacity duration-[0.4s] ease-out-expo"
+                    >
+                        1
+                    </div>
+                    <h3
+                        class="font-display font-normal text-[clamp(1.25rem,2vw,1.5rem)] mb-4 text-espresso"
+                    >
+                        Opowiedz o sobie
+                    </h3>
+                    <p
+                        class="text-[0.9375rem] text-warm-gray mb-10 leading-relaxed"
+                    >
                         Krótka ankieta — Twój styl, okazje, w czym się dobrze
                         czujesz. Podajesz wymiary, bo wietnamskie rozmiarówki
                         działają inaczej niż europejskie.
                     </p>
-                    <div class="process-card-time">~10 min</div>
+                    <div
+                        class="time-marker flex items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-brass pt-4 border-t border-stone"
+                    >
+                        ~10 min
+                    </div>
                 </div>
-                <div class="process-card">
-                    <div class="process-card-number">2</div>
-                    <h3>Wspólny moodboard</h3>
-                    <p>
+                <div
+                    class="card-top-line animate-card stagger-2 bg-sand p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-2 hover:shadow-brand-lg"
+                >
+                    <div
+                        class="absolute top-6 right-6 font-display text-[4rem] text-brass opacity-15 leading-none"
+                    >
+                        2
+                    </div>
+                    <h3
+                        class="font-display font-normal text-[clamp(1.25rem,2vw,1.5rem)] mb-4 text-espresso"
+                    >
+                        Wspólny moodboard
+                    </h3>
+                    <p
+                        class="text-[0.9375rem] text-warm-gray mb-10 leading-relaxed"
+                    >
                         Stylistka przygotowuje wizualną koncepcję dla Ciebie.
-                        Razem ją dopracowujecie — "więcej tego", "mniej
-                        tamtego" — aż będzie idealnie.
+                        Razem ją dopracowujecie — "więcej tego", "mniej tamtego"
+                        — aż będzie idealnie.
                     </p>
-                    <div class="process-card-time">2–3 dni</div>
+                    <div
+                        class="time-marker flex items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-brass pt-4 border-t border-stone"
+                    >
+                        2–3 dni
+                    </div>
                 </div>
-                <div class="process-card">
-                    <div class="process-card-number">3</div>
-                    <h3>Wybierasz stylizacje</h3>
-                    <p>
-                        Stylistka proponuje konkretne ubrania z butików.
-                        Dajesz feedback, ona poprawia. Pracujecie razem, aż
-                        wszystko będzie tak, jak chcesz.
+                <div
+                    class="card-top-line animate-card stagger-3 bg-sand p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-2 hover:shadow-brand-lg"
+                >
+                    <div
+                        class="absolute top-6 right-6 font-display text-[4rem] text-brass opacity-15 leading-none"
+                    >
+                        3
+                    </div>
+                    <h3
+                        class="font-display font-normal text-[clamp(1.25rem,2vw,1.5rem)] mb-4 text-espresso"
+                    >
+                        Wybierasz stylizacje
+                    </h3>
+                    <p
+                        class="text-[0.9375rem] text-warm-gray mb-10 leading-relaxed"
+                    >
+                        Stylistka proponuje konkretne ubrania z butików. Dajesz
+                        feedback, ona poprawia. Pracujecie razem, aż wszystko
+                        będzie tak, jak chcesz.
                     </p>
-                    <div class="process-card-time">5–7 dni</div>
+                    <div
+                        class="time-marker flex items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-brass pt-4 border-t border-stone"
+                    >
+                        5–7 dni
+                    </div>
                 </div>
-                <div class="process-card">
-                    <div class="process-card-number">4</div>
-                    <h3>Paczka pod drzwi</h3>
-                    <p>
-                        Zamawiamy, importujemy, dostarczamy. Cło, VAT,
-                        logistyka — wszystko po naszej stronie. Ty tylko
-                        odbierasz.
+                <div
+                    class="card-top-line animate-card stagger-4 bg-sand p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-2 hover:shadow-brand-lg"
+                >
+                    <div
+                        class="absolute top-6 right-6 font-display text-[4rem] text-brass opacity-15 leading-none"
+                    >
+                        4
+                    </div>
+                    <h3
+                        class="font-display font-normal text-[clamp(1.25rem,2vw,1.5rem)] mb-4 text-espresso"
+                    >
+                        Paczka pod drzwi
+                    </h3>
+                    <p
+                        class="text-[0.9375rem] text-warm-gray mb-10 leading-relaxed"
+                    >
+                        Zamawiamy, importujemy, dostarczamy. Cło, VAT, logistyka
+                        — wszystko po naszej stronie. Ty tylko odbierasz.
                     </p>
-                    <div class="process-card-time">2–3 tygodnie*</div>
+                    <div
+                        class="time-marker flex items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-brass pt-4 border-t border-stone"
+                    >
+                        7–10 dni*
+                    </div>
                 </div>
-                <div class="">
-                    <p>
+                <div class="col-span-full pt-4">
+                    <p class="text-[0.8125rem] text-warm-gray italic">
                         * Od zamówienia do dostawy. Wszystkie przesyłki wysyłamy
                         lotniczo, a cło i VAT załatwiamy za Ciebie.
                     </p>
                 </div>
             </div>
 
-            <div class="process-note">
+            <div
+                class="flex items-center gap-6 p-6 bg-gradient-to-r from-brass/[0.08] to-brass/[0.02] border-l-[3px] border-brass rounded-r-lg text-[0.9375rem] text-espresso"
+            >
                 <svg
+                    class="flex-shrink-0 text-brass"
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"
@@ -267,8 +502,8 @@ import Layout from "../layouts/Layout.astro";
                 </svg>
                 <span
                     >Po konsultacji możesz zrezygnować — zero zobowiązań.
-                    Płacisz 990 zł za usługę stylistyczną, a zakup ubrań
-                    to Twoja decyzja. <strong
+                    Płacisz 990 zł za usługę stylistyczną, a zakup ubrań to
+                    Twoja decyzja. <strong
                         >Stworzone stylizacje i tak zostają Twoje.</strong
                     ></span
                 >
@@ -276,23 +511,217 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing">
-        <div class="container">
-            <div class="section-header section-header-center">
-                <span class="section-number">02</span>
-                <h2 class="section-title">Przejrzyste zasady</h2>
+    <!-- Examples — 02 (moved before Pricing) -->
+    <section
+        class="py-24 sm:py-40 px-[clamp(1.5rem,5vw,4rem)] bg-sand"
+        id="przyklady"
+    >
+        <div class="max-w-container mx-auto">
+            <div class="flex items-baseline gap-6 mb-16">
+                <span
+                    class="font-display text-sm italic text-brass tracking-wider"
+                    >02</span
+                >
+                <h2
+                    class="font-display font-normal text-[clamp(2rem,4vw,3rem)]"
+                >
+                    Jak może wyglądać Twoja stylizacja?
+                </h2>
             </div>
 
-            <div class="pricing-cards">
-                <div class="pricing-card pricing-card-service">
-                    <div class="pricing-badge">Etap 1</div>
-                    <h3>Konsultacja <br /> stylistyczna</h3>
-                    <div class="pricing-amount">
-                        <span class="price">990</span>
-                        <span class="currency">zł</span>
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
+            >
+                <div
+                    class="animate-card stagger-1 bg-ivory overflow-hidden relative transition-all duration-[0.4s] ease-out-expo hover:-translate-y-2.5 hover:shadow-brand-lg group"
+                >
+                    <div class="aspect-[3/4] overflow-hidden relative">
+                        <img
+                            src="/img/casual.png"
+                            alt="Minimalistyczny casual - len i bawełna"
+                            loading="lazy"
+                            width="400"
+                            height="533"
+                            class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo group-hover:grayscale-0 group-hover:scale-105"
+                        />
                     </div>
-                    <ul class="pricing-features">
+                    <div class="p-6 lg:p-8">
+                        <span
+                            class="inline-block text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-brass mb-2 pb-2 border-b border-brass"
+                            >Minimalistyczny casual</span
+                        >
+                        <p
+                            class="text-[0.9375rem] text-warm-gray mb-4 leading-relaxed"
+                        >
+                            Len, bawełna, stonowane kolory. Na co dzień do pracy
+                            i po pracy.
+                        </p>
+                        <span class="font-display text-xl text-espresso"
+                            >jedwab · len · bawełna organiczna</span
+                        >
+                    </div>
+                </div>
+                <div
+                    class="animate-card stagger-2 bg-ivory overflow-hidden relative transition-all duration-[0.4s] ease-out-expo hover:-translate-y-2.5 hover:shadow-brand-lg group"
+                >
+                    <div class="aspect-[3/4] overflow-hidden relative">
+                        <img
+                            src="/img/elegant.png"
+                            alt="Elegancki wieczorowy - jedwab i satyna"
+                            loading="lazy"
+                            width="400"
+                            height="533"
+                            class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo group-hover:grayscale-0 group-hover:scale-105"
+                        />
+                    </div>
+                    <div class="p-6 lg:p-8">
+                        <span
+                            class="inline-block text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-brass mb-2 pb-2 border-b border-brass"
+                            >Elegancki wieczorowy</span
+                        >
+                        <p
+                            class="text-[0.9375rem] text-warm-gray mb-4 leading-relaxed"
+                        >
+                            Jedwab, satyna, wyraziste kroje. Na wyjścia i okazje
+                            specjalne.
+                        </p>
+                        <span class="font-display text-xl text-espresso"
+                            >jedwab · satyna · ręczne wykończenie</span
+                        >
+                    </div>
+                </div>
+                <div
+                    class="animate-card stagger-3 bg-ivory overflow-hidden relative transition-all duration-[0.4s] ease-out-expo hover:-translate-y-2.5 hover:shadow-brand-lg group sm:col-span-2 sm:max-w-[420px] sm:mx-auto lg:col-span-1 lg:max-w-none"
+                >
+                    <div class="aspect-[3/4] overflow-hidden relative">
+                        <img
+                            src="/img/boho.png"
+                            alt="Boho i artystyczny - wzory i tekstury"
+                            loading="lazy"
+                            width="400"
+                            height="533"
+                            class="w-full h-full object-cover grayscale-[20%] transition-all duration-700 ease-out-expo group-hover:grayscale-0 group-hover:scale-105"
+                        />
+                    </div>
+                    <div class="p-6 lg:p-8">
+                        <span
+                            class="inline-block text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-brass mb-2 pb-2 border-b border-brass"
+                            >Boho & artystyczny</span
+                        >
+                        <p
+                            class="text-[0.9375rem] text-warm-gray mb-4 leading-relaxed"
+                        >
+                            Wzory, tekstury, warstwy. Dla odważnych, którzy chcą
+                            się wyróżnić.
+                        </p>
+                        <span class="font-display text-xl text-espresso"
+                            >naturalne tkaniny · lokalni rzemieślnicy</span
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-[0.9375rem] text-warm-gray italic">
+                To przykładowe kierunki — Twoja stylistka dopasuje wszystko do
+                Twojego stylu i potrzeb.
+            </p>
+        </div>
+    </section>
+
+    <!-- Personal Note (moved before Pricing for trust) -->
+    <section
+        class="py-24 sm:py-40 px-[clamp(1.5rem,5vw,4rem)] bg-ivory relative"
+    >
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(184,149,110,0.06)_0%,transparent_70%)] pointer-events-none"
+        >
+        </div>
+        <div class="max-w-[720px] mx-auto text-center relative">
+            <div class="animate-fade-up">
+                <!-- Founder Photo -->
+                <div
+                    class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-8 border-[3px] border-brass opacity-90"
+                >
+                    <img
+                        src="/img/founders.jpg"
+                        alt="Mikołaj i Nikola — założyciele Săn Style"
+                        width="96"
+                        height="96"
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <div class="note-quote-mark relative">
+                    <p
+                        class="font-display text-[1.375rem] italic leading-relaxed text-espresso mb-6 relative"
+                    >
+                        Zakochaliśmy się w wietnamskiej modzie podczas podróży.
+                        Jakość tkanin, ręczne wykonanie, unikatowe kroje — nic z
+                        tego nie znajdziesz w europejskich sieciówkach.
+                        Pomyśleliśmy: dlaczego nikt tego nie robi?
+                    </p>
+                    <p
+                        class="font-display text-[1.375rem] italic leading-relaxed text-espresso mb-6 relative"
+                    >
+                        W marcu 2026 lecimy do Ho Chi Minh City, żeby osobiście
+                        spotkać się ze stylistkami i wybrać najlepsze butiki.
+                        Szukamy pierwszych 15 osób, które chcą to przetestować
+                        razem z nami.
+                    </p>
+                </div>
+                <div class="mt-10 pt-6 border-t border-stone inline-block">
+                    <span
+                        class="block font-display text-[1.375rem] text-espresso mb-1"
+                        >Mikołaj & Nikola</span
+                    >
+                    <span
+                        class="text-[0.6875rem] uppercase tracking-[0.2em] text-warm-gray"
+                        >Założyciele Săn Style</span
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing — 03 (moved after Examples) -->
+    <section
+        class="pricing-radial py-24 sm:py-40 px-[clamp(1.5rem,5vw,4rem)] bg-espresso text-ivory relative overflow-hidden"
+    >
+        <div class="max-w-container mx-auto relative">
+            <div class="flex flex-col items-center text-center gap-2 mb-16">
+                <span
+                    class="font-display text-sm italic text-brass-light tracking-wider"
+                    >03</span
+                >
+                <h2
+                    class="font-display font-normal text-[clamp(2rem,4vw,3rem)] text-ivory"
+                >
+                    Przejrzyste zasady
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+                <div
+                    class="animate-card stagger-1 bg-white/[0.03] border border-white/[0.08] p-10 lg:p-14 relative transition-all duration-[0.4s] ease-out-expo hover:bg-white/[0.05] hover:border-brass/30 hover:-translate-y-1"
+                >
+                    <div
+                        class="absolute top-6 right-6 text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-brass-light py-2 px-4 border border-brass opacity-80"
+                    >
+                        Etap 1
+                    </div>
+                    <h3 class="font-display text-[1.375rem] mb-6 text-ivory">
+                        Konsultacja<br />stylistyczna
+                    </h3>
+                    <div class="flex items-baseline gap-1.5 mb-10">
+                        <span
+                            class="font-display text-[3.5rem] max-sm:text-[2.75rem] font-normal leading-none tracking-tight"
+                            >990</span
+                        >
+                        <span class="text-base text-taupe">zł</span>
+                    </div>
+                    <ul
+                        class="pricing-list space-y-2 text-[0.9375rem] text-white/70"
+                    >
                         <li>Poznajemy Twój styl i preferencje</li>
                         <li>Wspólny moodboard ze stylistką</li>
                         <li>Do 5 kompletnych propozycji stylizacji</li>
@@ -301,20 +730,33 @@ import Layout from "../layouts/Layout.astro";
                     </ul>
                 </div>
 
-                <div class="pricing-card pricing-card-product">
-                    <div class="pricing-badge">Etap 2</div>
-                    <h3>Twoje <br />stylizacje</h3>
-                    <div class="pricing-amount">
-                        <span class="price-prefix">od</span>
-                        <span class="price">2000</span>
-                        <span class="currency">zł</span>
+                <div
+                    class="animate-card stagger-2 bg-white/[0.03] border border-white/[0.08] p-10 lg:p-14 relative transition-all duration-[0.4s] ease-out-expo hover:bg-white/[0.05] hover:border-brass/30 hover:-translate-y-1"
+                >
+                    <div
+                        class="absolute top-6 right-6 text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-brass-light py-2 px-4 border border-brass opacity-80"
+                    >
+                        Etap 2
                     </div>
-                    <p class="pricing-note">
+                    <h3 class="font-display text-[1.375rem] mb-6 text-ivory">
+                        Twoje<br />stylizacje
+                    </h3>
+                    <div class="flex items-baseline gap-1.5 mb-10">
+                        <span class="text-base text-taupe">od</span>
+                        <span
+                            class="font-display text-[3.5rem] max-sm:text-[2.75rem] font-normal leading-none tracking-tight"
+                            >2000</span
+                        >
+                        <span class="text-base text-taupe">zł</span>
+                    </div>
+                    <p class="text-sm text-taupe mb-10">
                         Ty ustalasz budżet — stylistka dobiera ubrania w jego
-                        ramach. W cenie jest wszystko: ubrania, import, cło,
-                        VAT i dostawa pod drzwi.
+                        ramach. W cenie jest wszystko: ubrania, import, cło, VAT
+                        i dostawa pod drzwi.
                     </p>
-                    <ul class="pricing-features">
+                    <ul
+                        class="pricing-list space-y-2 text-[0.9375rem] text-white/70"
+                    >
                         <li>Kompletne stylizacje z wietnamskich butików</li>
                         <li>Naturalne tkaniny: jedwab, len, bawełna</li>
                         <li>Import, cło i VAT w cenie</li>
@@ -323,33 +765,60 @@ import Layout from "../layouts/Layout.astro";
                 </div>
             </div>
 
-            <div class="pricing-comparison">
-                <h4>Ta sama jakość, inna cena</h4>
-                <div class="comparison-table">
-                    <div class="comparison-row">
-                        <span class="comparison-label">Sukienka jedwabna</span>
-                        <span class="comparison-other"
+            <!-- Comparison Table -->
+            <div
+                class="bg-white/[0.02] border border-white/[0.05] p-8 lg:p-10 rounded"
+            >
+                <h4
+                    class="text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-brass-light mb-8 font-body"
+                >
+                    Porównaj sama
+                </h4>
+                <div class="flex flex-col gap-4">
+                    <div
+                        class="grid grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1.5fr_1fr] gap-4 sm:gap-10 py-4 border-b border-white/[0.05] text-[0.9375rem] items-center"
+                    >
+                        <span
+                            class="text-ivory font-medium sm:col-span-1 col-span-full"
+                            >Sukienka jedwabna</span
+                        >
+                        <span class="text-taupe line-through opacity-60"
                             >COS / Massimo Dutti: 800–1200 zł</span
                         >
-                        <span class="comparison-ours">Przez nas: ~400–600 zł</span
+                        <span class="text-brass-light font-medium"
+                            >Przez nas: ~400–600 zł</span
                         >
                     </div>
-                    <div class="comparison-row">
-                        <span class="comparison-label">Lniana marynarka</span>
-                        <span class="comparison-other">Zara: 500–700 zł</span>
-                        <span class="comparison-ours">Przez nas: ~300–450 zł</span
+                    <div
+                        class="grid grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1.5fr_1fr] gap-4 sm:gap-10 py-4 border-b border-white/[0.05] text-[0.9375rem] items-center"
+                    >
+                        <span
+                            class="text-ivory font-medium sm:col-span-1 col-span-full"
+                            >Lniana marynarka</span
+                        >
+                        <span class="text-taupe line-through opacity-60"
+                            >Zara: 500–700 zł</span
+                        >
+                        <span class="text-brass-light font-medium"
+                            >Przez nas: ~300–450 zł</span
                         >
                     </div>
-                    <div class="comparison-row">
-                        <span class="comparison-label">Bawełniana koszula</span>
-                        <span class="comparison-other"
+                    <div
+                        class="grid grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1.5fr_1fr] gap-4 sm:gap-10 py-4 border-b border-white/[0.05] text-[0.9375rem] items-center"
+                    >
+                        <span
+                            class="text-ivory font-medium sm:col-span-1 col-span-full"
+                            >Bawełniana koszula</span
+                        >
+                        <span class="text-taupe line-through opacity-60"
                             >H&M Premium: 200–300 zł</span
                         >
-                        <span class="comparison-ours">Przez nas: ~120–180 zł</span
+                        <span class="text-brass-light font-medium"
+                            >Przez nas: ~120–180 zł</span
                         >
                     </div>
                 </div>
-                <p class="comparison-footnote">
+                <p class="mt-8 text-xs text-taupe italic">
                     * Ceny orientacyjne, zawierają nasz serwis i dostawę do
                     Polski. Finalna cena zależy od Twojego budżetu.
                 </p>
@@ -357,166 +826,137 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 
-    <!-- Examples Section -->
-    <section class="examples" id="przyklady">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">03</span>
-                <h2 class="section-title">
-                    Jak może wyglądać Twoja stylizacja?
+    <!-- Social Proof Bar (moved after Pricing) -->
+    <section
+        class="bg-ivory py-10 px-[clamp(1.5rem,5vw,4rem)] border-y border-stone overflow-hidden"
+    >
+        <div
+            class="max-w-container mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 text-center sm:text-left"
+        >
+            <div class="flex items-center gap-4">
+                <span
+                    class="font-display text-[2.5rem] text-brass leading-none"
+                    id="signupCount">47</span
+                >
+                <span class="text-[0.9375rem] text-warm-gray"
+                    >osób na liście oczekujących</span
+                >
+            </div>
+            <div class="proof-divider max-sm:!w-16 max-sm:!h-px"></div>
+            <div class="flex items-center gap-4 flex-wrap justify-center">
+                <span
+                    class="font-display italic text-[1.0625rem] text-espresso max-w-[400px]"
+                    >"Wietnam staje się nowym hubem azjatyckiej mody —
+                    projektanci ubierają Beyoncé i Blackpink"</span
+                >
+                <span class="text-xs text-warm-gray whitespace-nowrap"
+                    >— Rest of World</span
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ — 04 -->
+    <section
+        class="py-24 sm:py-40 px-[clamp(1.5rem,5vw,4rem)] bg-sand"
+        id="faq"
+    >
+        <div class="max-w-container mx-auto">
+            <div class="flex flex-col items-center text-center gap-2 mb-16">
+                <span
+                    class="font-display text-sm italic text-brass tracking-wider"
+                    >04</span
+                >
+                <h2
+                    class="font-display font-normal text-[clamp(2rem,4vw,3rem)]"
+                >
+                    Często zadawane pytania
                 </h2>
             </div>
 
-            <div class="examples-grid">
-                <div class="example-card">
-                    <div class="example-image">
-                        <img
-                            src="/img/casual.png"
-                            alt="Minimalistyczny casual - len i bawełna"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="example-content">
-                        <span class="example-style">Minimalistyczny casual</span
-                        >
-                        <p>
-                            Len, bawełna, stonowane kolory. Na co dzień do pracy
-                            i po pracy.
-                        </p>
-                        <span class="example-price"
-                            >przykładowy budżet: 2 000 – 3 000 zł</span
-                        >
-                    </div>
-                </div>
-                <div class="example-card">
-                    <div class="example-image">
-                        <img
-                            src="/img/elegant.png"
-                            alt="Elegancki wieczorowy - jedwab i satyna"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="example-content">
-                        <span class="example-style">Elegancki wieczorowy</span>
-                        <p>
-                            Jedwab, satyna, wyraziste kroje. Na wyjścia i okazje
-                            specjalne.
-                        </p>
-                        <span class="example-price"
-                            >przykładowy budżet: 3 000 – 5 000 zł</span
-                        >
-                    </div>
-                </div>
-                <div class="example-card">
-                    <div class="example-image">
-                        <img
-                            src="/img/boho.png"
-                            alt="Boho i artystyczny - wzory i tekstury"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="example-content">
-                        <span class="example-style">Boho & artystyczny</span>
-                        <p>
-                            Wzory, tekstury, warstwy. Dla odważnych, którzy chcą
-                            się wyróżnić.
-                        </p>
-                        <span class="example-price"
-                            >przykładowy budżet: 2 500 – 4 000 zł</span
-                        >
-                    </div>
-                </div>
-            </div>
-
-            <p class="examples-note">
-                To przykładowe kierunki — Twoja stylizacja będzie dopasowana do
-                Ciebie i Twojego budżetu.
-            </p>
-        </div>
-    </section>
-
-    <!-- Personal Note Section -->
-    <section class="personal-note">
-        <div class="container">
-            <div class="note-content animate-on-scroll">
-                <div class="note-quote">"</div>
-                <p class="note-text">
-                    Zakochaliśmy się w wietnamskiej modzie podczas podróży.
-                    Jakość tkanin w lokalnych butikach była nieporównywalna
-                    z europejskimi sieciówkami — a ceny kilkukrotnie niższe.
-                    Pomyśleliśmy: dlaczego nikt tego nie robi?
-                </p>
-                <p class="note-text">
-                    W marcu 2026 lecimy do Ho Chi Minh City, żeby osobiście
-                    spotkać się ze stylistkami i wybrać najlepsze butiki.
-                    Szukamy pierwszych 15 osób, które chcą to przetestować
-                    razem z nami.
-                </p>
-                <div class="note-signature">
-                    <span class="signature-names">Mikołaj & Nikola</span>
-                    <span class="signature-role">Założyciele Săn Style</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header section-header-center">
-                <span class="section-number">04</span>
-                <h2 class="section-title">Często zadawane pytania</h2>
-            </div>
-
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>Co jeśli ubrania nie będą pasować?</h4>
-                    <p>
-                        Właśnie dlatego tak dokładnie zbieramy Twoje wymiary
-                        na początku. Stylistka dopasowuje rozmiary precyzyjnie,
-                        a gdyby coś nie grało — pomagamy z wymianą.
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="faq-left-line animate-card stagger-1 bg-ivory p-8 lg:p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-brand-md"
+                >
+                    <h4
+                        class="font-body font-semibold text-base mb-4 text-espresso pr-6"
+                    >
+                        Co jeśli ubrania nie będą pasować?
+                    </h4>
+                    <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
+                        Właśnie dlatego tak dokładnie zbieramy Twoje wymiary na
+                        początku. Stylistka dopasowuje rozmiary precyzyjnie, a
+                        gdyby coś nie grało — pomagamy z wymianą.
                     </p>
                 </div>
-                <div class="faq-item">
-                    <h4>Cło, VAT — muszę się tym martwić?</h4>
-                    <p>
-                        Nie. Wszystko jest wliczone w cenę. Cło, VAT,
-                        logistyka, odprawa celna — to po naszej stronie.
-                        Paczka przyjeżdża pod Twoje drzwi, gotowa.
+                <div
+                    class="faq-left-line animate-card stagger-2 bg-ivory p-8 lg:p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-brand-md"
+                >
+                    <h4
+                        class="font-body font-semibold text-base mb-4 text-espresso pr-6"
+                    >
+                        Cło, VAT — muszę się tym martwić?
+                    </h4>
+                    <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
+                        Nie. Wszystko jest wliczone w cenę. Cło, VAT, logistyka,
+                        odprawa celna — to po naszej stronie. Paczka przyjeżdża
+                        pod Twoje drzwi, gotowa.
                     </p>
                 </div>
-                <div class="faq-item">
-                    <h4>Ile trwa cały proces?</h4>
-                    <p>
-                        Konsultacja i wybór stylizacji to 1–2 tygodnie.
-                        Dostawa z Wietnamu kolejne 2–3 tygodnie. W sumie
-                        od zapisu do paczki mija około miesiąc.
+                <div
+                    class="faq-left-line animate-card stagger-3 bg-ivory p-8 lg:p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-brand-md"
+                >
+                    <h4
+                        class="font-body font-semibold text-base mb-4 text-espresso pr-6"
+                    >
+                        Ile trwa cały proces?
+                    </h4>
+                    <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
+                        Konsultacja i wybór stylizacji to 1–2 tygodnie. Dostawa
+                        z Wietnamu kolejne 7–10 dni. W sumie od zapisu do paczki
+                        mija około 3 tygodnie.
                     </p>
                 </div>
-                <div class="faq-item">
-                    <h4>A jeśli propozycja stylistki mi się nie spodoba?</h4>
-                    <p>
-                        Bez stresu — pracujecie iteracyjnie. Mówisz co
-                        zmienić, stylistka poprawia. Po konsultacji możesz
-                        też po prostu zrezygnować z zakupu.
+                <div
+                    class="faq-left-line animate-card stagger-4 bg-ivory p-8 lg:p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-brand-md"
+                >
+                    <h4
+                        class="font-body font-semibold text-base mb-4 text-espresso pr-6"
+                    >
+                        A jeśli propozycja stylistki mi się nie spodoba?
+                    </h4>
+                    <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
+                        Bez stresu — pracujecie iteracyjnie. Mówisz co zmienić,
+                        stylistka poprawia. Po konsultacji możesz też po prostu
+                        zrezygnować z zakupu.
                     </p>
                 </div>
-                <div class="faq-item">
-                    <h4>Czy mogę zwrócić ubrania?</h4>
-                    <p>
+                <div
+                    class="faq-left-line animate-card stagger-5 bg-ivory p-8 lg:p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-brand-md"
+                >
+                    <h4
+                        class="font-body font-semibold text-base mb-4 text-espresso pr-6"
+                    >
+                        Czy mogę zwrócić ubrania?
+                    </h4>
+                    <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
                         Ubrania są dobierane specjalnie dla Ciebie, więc
-                        standardowe zwroty nie wchodzą w grę. Ale właśnie
-                        po to jest etap konsultacji — żebyś była pewna
-                        przed zakupem.
+                        standardowe zwroty nie wchodzą w grę. Ale właśnie po to
+                        jest etap konsultacji — żebyś była pewna przed zakupem.
                     </p>
                 </div>
-                <div class="faq-item">
-                    <h4>Jakie rozmiary są dostępne?</h4>
-                    <p>
-                        Wietnamskie butiki najlepiej obsługują rozmiary XS–L
-                        (EU 34–42) i wzrost 155–175 cm. Jeśli nosisz
-                        większe rozmiary, napisz do nas — sprawdzimy
-                        możliwości.
+                <div
+                    class="faq-left-line animate-card stagger-6 bg-ivory p-8 lg:p-10 relative overflow-hidden transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-brand-md"
+                >
+                    <h4
+                        class="font-body font-semibold text-base mb-4 text-espresso pr-6"
+                    >
+                        Jakie rozmiary są dostępne?
+                    </h4>
+                    <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
+                        Wietnamskie butiki najlepiej obsługują rozmiary XS–L (EU
+                        34–42) i wzrost 155–175 cm. Jeśli nosisz większe
+                        rozmiary, napisz do nas — sprawdzimy możliwości.
                     </p>
                 </div>
             </div>
@@ -524,219 +964,305 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- Form Section -->
-    <section class="form-section" id="formularz">
-        <div class="form-background">
-            <div class="form-bg-shape"></div>
+    <section
+        class="py-24 sm:py-40 px-[clamp(1.5rem,5vw,4rem)] bg-ivory relative overflow-hidden"
+        id="formularz"
+    >
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute -top-[30%] -right-[15%] w-[70%] h-[160%] bg-gradient-to-br from-brass/[0.04] to-transparent -rotate-12 rounded-full"
+            >
+            </div>
         </div>
-        <div class="container">
-            <div class="form-container">
-                <div class="form-header">
-                    <div class="form-urgency">
-                        <span class="urgency-badge">Limit miejsc</span>
-                        <span class="urgency-text"
-                            >Pierwsza grupa: <strong>15 osób</strong>. Zostało: <strong
-                                class="spots-remaining">12</strong
-                            >.</span
+        <div class="max-w-[620px] mx-auto relative">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-4 bg-espresso text-ivory py-2 px-6 rounded-full mb-8 text-[0.8125rem]"
+                >
+                    <span
+                        class="text-[0.5625rem] font-bold uppercase tracking-[0.15em] text-brass bg-brass/20 py-1 px-2 rounded-full"
+                        >Limit miejsc</span
+                    >
+                    <span
+                        >Pierwsza grupa: <strong>15 osób</strong>. Zostało: <strong
+                            class="spots-remaining text-brass-light">12</strong
+                        >.</span
+                    >
+                </div>
+                <h2
+                    class="font-display font-normal text-[clamp(2rem,4vw,3rem)] mb-4"
+                >
+                    Zapisz się na listę
+                </h2>
+                <p class="text-warm-gray max-w-[420px] mx-auto">
+                    Zostaw kontakt — odezwiemy się w ciągu 48h z detalami i
+                    krótką ankietą.
+                </p>
+            </div>
+
+            <form
+                class="form-gradient-top relative bg-ivory p-8 sm:p-12 shadow-brand-lg border border-stone"
+                id="signupForm"
+            >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <div class="flex flex-col">
+                        <label
+                            for="name"
+                            class="text-[0.8125rem] font-medium mb-2 text-espresso"
+                            >Imię *</label
                         >
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            aria-required="true"
+                            placeholder="Anna"
+                            class="py-3 px-4 h-[52px] border border-stone bg-ivory text-espresso rounded transition-all duration-200 ease-out-expo focus:outline-none focus:border-brass focus:ring-4 focus:ring-brass/10 placeholder:text-taupe"
+                        />
                     </div>
-                    <h2>Zapisz się na listę</h2>
-                    <p>
-                        Wypełnij krótki formularz — sprawdzimy, czy wietnamskie
-                        rozmiary będą dla Ciebie odpowiednie i odezwiemy się
-                        z detalami.
-                    </p>
+                    <div class="flex flex-col">
+                        <label
+                            for="email"
+                            class="text-[0.8125rem] font-medium mb-2 text-espresso"
+                            >Email *</label
+                        >
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            aria-required="true"
+                            placeholder="anna@example.com"
+                            class="py-3 px-4 h-[52px] border border-stone bg-ivory text-espresso rounded transition-all duration-200 ease-out-expo focus:outline-none focus:border-brass focus:ring-4 focus:ring-brass/10 placeholder:text-taupe"
+                        />
+                    </div>
                 </div>
 
-                <form class="signup-form" id="signupForm">
-                    <div class="form-row">
-                        <div class="form-field">
-                            <label for="name">Imię *</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                required
-                                placeholder="Anna"
-                            />
-                        </div>
-                        <div class="form-field">
-                            <label for="email">Email *</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                placeholder="anna@example.com"
-                            />
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-field">
-                            <label for="height">Wzrost (cm) *</label>
-                            <input
-                                type="number"
-                                id="height"
-                                name="height"
-                                min="140"
-                                max="220"
-                                required
-                                placeholder="165"
-                            />
-                        </div>
-                        <div class="form-field">
-                            <label for="size">Rozmiar *</label>
-                            <select id="size" name="size" required>
-                                <option value="">Wybierz rozmiar</option>
-                                <option value="XS">XS (EU 32-34)</option>
-                                <option value="S">S (EU 36)</option>
-                                <option value="M">M (EU 38)</option>
-                                <option value="L">L (EU 40-42)</option>
-                                <option value="XL">XL (EU 44)</option>
-                                <option value="XXL">XXL (EU 46+)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="interest"
-                            >Co Cię najbardziej interesuje?</label
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    <div class="flex flex-col">
+                        <label
+                            for="instagram"
+                            class="text-[0.8125rem] font-medium mb-2 text-espresso"
+                            >Instagram (opcjonalne)</label
                         >
-                        <select id="interest" name="interest">
+                        <input
+                            type="text"
+                            id="instagram"
+                            name="instagram"
+                            placeholder="@twojprofil"
+                            class="py-3 px-4 h-[52px] border border-stone bg-ivory text-espresso rounded transition-all duration-200 ease-out-expo focus:outline-none focus:border-brass focus:ring-4 focus:ring-brass/10 placeholder:text-taupe"
+                        />
+                        <span class="text-xs text-warm-gray mt-1 italic"
+                            >Podglądniemy Twój styl, żeby dopasować stylistkę</span
+                        >
+                    </div>
+                    <div class="flex flex-col">
+                        <label
+                            for="source"
+                            class="text-[0.8125rem] font-medium mb-2 text-espresso"
+                            >Skąd o nas wiesz?</label
+                        >
+                        <select
+                            id="source"
+                            name="source"
+                            class="custom-select py-3 px-4 h-[52px] border border-stone bg-ivory text-espresso rounded cursor-pointer transition-all duration-200 ease-out-expo focus:outline-none focus:border-brass focus:ring-4 focus:ring-brass/10"
+                        >
                             <option value="">Wybierz (opcjonalne)</option>
-                            <option value="casual">Na co dzień / casual</option>
-                            <option value="work">Do pracy</option>
-                            <option value="occasion">Okazje specjalne</option>
-                            <option value="all">Wszystko po trochu</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="friend"
+                                >Od koleżanki / znajomej</option
+                            >
+                            <option value="other">Inne</option>
                         </select>
                     </div>
+                </div>
 
-                    <button type="submit" class="form-submit">
-                        <span>Zapisz mnie na listę</span>
+                <button
+                    type="submit"
+                    class="btn-fill w-full flex items-center justify-center gap-4 py-5 px-10 bg-espresso text-ivory text-base font-medium tracking-wide rounded-full transition-all duration-[0.4s] ease-out-expo hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(184,149,110,0.3)]"
+                >
+                    <span class="relative z-10">Zapisz mnie na listę</span>
+                    <svg
+                        class="relative z-10 transition-transform duration-[0.4s] ease-out-expo"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                    >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <div
+                    class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10 mt-10 pt-6 border-t border-stone"
+                >
+                    <div class="flex items-center gap-2 text-xs text-warm-gray">
                         <svg
-                            width="20"
-                            height="20"
+                            class="text-brass"
+                            width="16"
+                            height="16"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="1.5"
+                            stroke-width="2"
+                            ><path
+                                d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                            ></path></svg
                         >
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-
-                    <div class="form-trust">
-                        <div class="trust-item">
-                            <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                                ></path>
-                            </svg>
-                            <span>Dane chronione</span>
-                        </div>
-                        <div class="trust-item">
-                            <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
-                                ></path>
-                                <polyline points="22 4 12 14.01 9 11.01"
-                                ></polyline>
-                            </svg>
-                            <span>Zero spamu</span>
-                        </div>
-                        <div class="trust-item">
-                            <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M12 6v6l4 2"></path>
-                            </svg>
-                            <span>Odpowiedź w 48h</span>
-                        </div>
+                        <span>Dane chronione</span>
                     </div>
-                </form>
-
-                <div class="form-footer">
-                    <p>
-                        Po zapisie wyślemy krótką ankietę z pytaniami o wymiary.
-                        Na tej podstawie dopasujemy stylistkę i rozpoczniemy
-                        proces.
-                    </p>
+                    <div class="flex items-center gap-2 text-xs text-warm-gray">
+                        <svg
+                            class="text-brass"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            ><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                            ></path><polyline points="22 4 12 14.01 9 11.01"
+                            ></polyline></svg
+                        >
+                        <span>Zero spamu</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-warm-gray">
+                        <svg
+                            class="text-brass"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            ><circle cx="12" cy="12" r="10"></circle><path
+                                d="M12 6v6l4 2"></path></svg
+                        >
+                        <span>Odpowiedź w 48h</span>
+                    </div>
                 </div>
+            </form>
+
+            <div class="mt-10 text-center">
+                <p
+                    class="text-[0.8125rem] text-warm-gray max-w-[380px] mx-auto"
+                >
+                    Po zapisie wyślemy krótką ankietę — styl, wymiary,
+                    preferencje. Na tej podstawie dopasujemy dla Ciebie
+                    stylistkę.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <a href="#" class="footer-logo">
-                <span class="logo-mark">山</span>
-                <span class="logo-text">Săn Style</span>
+    <footer class="bg-ink text-sand py-10 px-[clamp(1.5rem,5vw,4rem)]">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-container mx-auto text-center md:text-left"
+        >
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-[1.75rem] text-brass font-light">山</span>
+                <span class="font-display text-[1.375rem] font-medium text-sand"
+                    >Săn Style</span
+                >
             </a>
-            <div class="footer-links">
-                <a href="mailto:hello@sanstyle.pl">hello@sanstyle.pl</a>
+            <div class="flex gap-10">
+                <a
+                    href="mailto:hello@sanstyle.pl"
+                    class="text-sm text-taupe transition-colors duration-200 ease-out-expo hover:text-brass"
+                    >hello@sanstyle.pl</a
+                >
                 <a
                     href="https://instagram.com/sanstyle.pl"
                     target="_blank"
-                    rel="noopener">Instagram</a
+                    rel="noopener"
+                    class="text-sm text-taupe transition-colors duration-200 ease-out-expo hover:text-brass"
+                    >Instagram</a
                 >
             </div>
-            <div class="footer-copy">
-                <span>© 2026 Săn Style. Projekt w fazie walidacji.</span>
-            </div>
+            <span class="text-xs text-taupe"
+                >© 2026 Săn Style. Projekt w fazie walidacji.</span
+            >
         </div>
     </footer>
 
+    <!-- Sticky CTA Mobile -->
+    <div
+        class="sticky-cta fixed bottom-0 left-0 right-0 z-[999] p-4 bg-ivory/95 backdrop-blur-md border-t border-stone md:hidden"
+        id="stickyCta"
+    >
+        <a
+            href="#formularz"
+            class="flex items-center justify-center gap-2 py-3 px-8 bg-espresso text-ivory rounded-full text-[0.9375rem] font-medium"
+        >
+            <span>Zapisz się na listę</span>
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg
+            >
+        </a>
+    </div>
+
     <!-- Success Modal -->
-    <div class="modal" id="successModal">
-        <div class="modal-backdrop"></div>
-        <div class="modal-content">
-            <div class="modal-icon">
+    <div
+        class="fixed inset-0 z-[10000] flex items-center justify-center p-6 opacity-0 invisible transition-all duration-[0.4s] ease-out-expo"
+        id="successModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+        <div
+            class="absolute inset-0 bg-ink/90 backdrop-blur-lg"
+            id="modalBackdrop"
+        >
+        </div>
+        <div
+            class="relative bg-ivory p-12 max-w-[440px] text-center translate-y-8 scale-95 transition-transform duration-[0.4s] ease-out-expo"
+            id="modalContent"
+        >
+            <div
+                class="w-[88px] h-[88px] mx-auto mb-8 flex items-center justify-center bg-gradient-to-br from-brass/15 to-brass/5 rounded-full text-brass"
+            >
                 <svg
                     width="48"
                     height="48"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="1.5"
+                    stroke-width="1.5"><path d="M20 6L9 17l-5-5"></path></svg
                 >
-                    <path d="M20 6L9 17l-5-5"></path>
-                </svg>
             </div>
-            <h3>Super, jesteś na liście!</h3>
-            <p>
-                Sprawdź email — wyślemy Ci potwierdzenie i krótką ankietę
-                z pytaniami o wymiary.
+            <h3
+                class="font-display font-normal text-[1.75rem] mb-4"
+                id="modalTitle"
+            >
+                Super, jesteś na liście!
+            </h3>
+            <p class="text-warm-gray mb-4">
+                Sprawdź email — wyślemy Ci potwierdzenie i krótką ankietę,
+                żebyśmy mogły lepiej Cię poznać.
             </p>
-            <p class="modal-note">Odezwiemy się w ciągu 48h.</p>
-            <button class="modal-close" id="closeModalBtn">Zamknij</button>
+            <p class="text-sm text-warm-gray mb-10">
+                Odezwiemy się w ciągu 48h.
+            </p>
+            <button
+                class="py-4 px-10 bg-espresso text-ivory text-[0.9375rem] font-medium rounded-full transition-all duration-[0.4s] ease-out-expo hover:bg-brass-dark hover:-translate-y-0.5"
+                id="closeModalBtn">Zamknij</button
+            >
         </div>
     </div>
 </Layout>
 
 <script>
-    // ============================================
-    // SĂN STYLE — Enhanced Landing Page Scripts
-    // ============================================
+    import { actions, isInputError } from "astro:actions";
 
     document.addEventListener("DOMContentLoaded", () => {
         initSmoothScroll();
@@ -745,28 +1271,47 @@ import Layout from "../layouts/Layout.astro";
         initNavScroll();
         initCounterAnimation();
         initModalClose();
-        initFormFieldEffects();
+        initModalFocusTrap();
         initParallaxEffects();
+        initHamburgerMenu();
+        initStickyCta();
     });
 
-    // Smooth scroll for anchor links
+    // Hamburger menu
+    function initHamburgerMenu() {
+        const hamburger = document.getElementById("navHamburger");
+        const navLinks = document.getElementById("navLinks");
+        if (!hamburger || !navLinks) return;
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navLinks.classList.remove("active");
+            });
+        });
+    }
+
+    // Smooth scroll
     function initSmoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
             anchor.addEventListener("click", function (e) {
                 const href = this.getAttribute("href");
                 if (!href || href === "#") return;
-
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    const nav = document.querySelector(".nav") as HTMLElement;
+                    const nav = document.querySelector("nav") as HTMLElement;
                     const navHeight = nav?.offsetHeight || 0;
                     const targetPosition =
                         target.getBoundingClientRect().top +
                         window.pageYOffset -
                         navHeight -
                         20;
-
                     window.scrollTo({
                         top: targetPosition,
                         behavior: "smooth",
@@ -776,114 +1321,136 @@ import Layout from "../layouts/Layout.astro";
         });
     }
 
-    // Form submission handling
+    // Form submission
     function initFormSubmission() {
         const form = document.getElementById("signupForm") as HTMLFormElement;
+        if (!form) return;
 
-        if (form) {
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
 
-                const formData = new FormData(form);
-                const data = Object.fromEntries(formData.entries());
+            // Clear previous errors
+            const existingError = form.querySelector(".form-error");
+            if (existingError) existingError.remove();
 
-                // Here you would typically send to your backend
-                console.log("Form submission:", data);
+            const submitBtn = form.querySelector(
+                "button[type='submit']",
+            ) as HTMLButtonElement;
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.innerHTML =
+                '<span class="relative z-10">Wysyłanie...</span>';
+            submitBtn.disabled = true;
+            submitBtn.style.pointerEvents = "none";
 
-                // Simulate API call delay
-                const submitBtn = form.querySelector(
-                    ".form-submit",
-                ) as HTMLButtonElement;
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = "<span>Wysyłanie...</span>";
-                submitBtn.disabled = true;
-                submitBtn.style.pointerEvents = "none";
+            const { data, error } = await actions.signup(formData);
 
-                await new Promise((resolve) => setTimeout(resolve, 1000));
-
-                // Update signup counter
-                updateSignupCounter();
-
-                // Show success modal
-                showModal();
-
-                // Reset form and button
-                form.reset();
-                submitBtn.innerHTML = originalText;
+            if (error) {
+                submitBtn.innerHTML = originalHTML;
                 submitBtn.disabled = false;
                 submitBtn.style.pointerEvents = "";
-            });
-        }
-    }
 
-    // Update signup counter after form submission
-    function updateSignupCounter() {
-        const counter = document.getElementById("signupCount");
-        if (counter) {
-            const currentCount = parseInt(counter.textContent || "0");
-            animateNumber(counter, currentCount, currentCount + 1, 600);
-        }
+                let message = "Coś poszło nie tak. Spróbuj ponownie.";
+                if (isInputError(error)) {
+                    const fieldErrors = Object.values(error.fields).flat();
+                    if (fieldErrors.length > 0) {
+                        message = fieldErrors.join(". ");
+                    }
+                }
 
-        // Update remaining spots
-        const spotsElements = document.querySelectorAll(
-            ".spots-remaining, .spots-counter",
-        );
-        spotsElements.forEach((el) => {
-            const current = parseInt(el.textContent || "0");
-            if (current > 0) {
-                el.textContent = String(current - 1);
+                const errorDiv = document.createElement("div");
+                errorDiv.className =
+                    "form-error mt-4 p-4 bg-red-50 border border-red-200 rounded text-red-700 text-sm text-center";
+                errorDiv.textContent = message;
+                submitBtn.insertAdjacentElement("afterend", errorDiv);
+                return;
             }
+
+            showModal();
+            form.reset();
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.disabled = false;
+            submitBtn.style.pointerEvents = "";
         });
     }
 
-    // Modal functions
+    // Modal
     function showModal() {
         const modal = document.getElementById("successModal");
-        if (modal) {
-            modal.classList.add("active");
-            document.body.style.overflow = "hidden";
+        if (!modal) return;
+        modal.classList.remove("opacity-0", "invisible");
+        modal.classList.add("opacity-100", "visible");
+        const content = document.getElementById("modalContent");
+        if (content) {
+            content.classList.remove("translate-y-8", "scale-95");
+            content.classList.add("translate-y-0", "scale-100");
         }
+        document.body.style.overflow = "hidden";
+        // Focus the close button
+        setTimeout(
+            () => document.getElementById("closeModalBtn")?.focus(),
+            100,
+        );
     }
 
     function closeModal() {
         const modal = document.getElementById("successModal");
-        if (modal) {
-            modal.classList.remove("active");
-            document.body.style.overflow = "";
+        if (!modal) return;
+        modal.classList.add("opacity-0", "invisible");
+        modal.classList.remove("opacity-100", "visible");
+        const content = document.getElementById("modalContent");
+        if (content) {
+            content.classList.add("translate-y-8", "scale-95");
+            content.classList.remove("translate-y-0", "scale-100");
         }
+        document.body.style.overflow = "";
     }
 
     function initModalClose() {
-        // Close button
         document
             .getElementById("closeModalBtn")
             ?.addEventListener("click", closeModal);
-
-        // Close on backdrop click
-        document.addEventListener("click", (e) => {
-            if (
-                (e.target as HTMLElement).classList.contains("modal-backdrop")
-            ) {
-                closeModal();
-            }
-        });
-
-        // Close on Escape key
+        document
+            .getElementById("modalBackdrop")
+            ?.addEventListener("click", closeModal);
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") {
-                closeModal();
+            if (e.key === "Escape") closeModal();
+        });
+    }
+
+    // Modal focus trap (a11y)
+    function initModalFocusTrap() {
+        const modal = document.getElementById("successModal");
+        if (!modal) return;
+
+        modal.addEventListener("keydown", (e) => {
+            if (e.key !== "Tab") return;
+            const focusable = modal.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+            );
+            if (focusable.length === 0) return;
+            const first = focusable[0] as HTMLElement;
+            const last = focusable[focusable.length - 1] as HTMLElement;
+
+            if (e.shiftKey) {
+                if (document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                }
+            } else {
+                if (document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
             }
         });
     }
 
-    // Scroll-triggered animations using Intersection Observer
+    // Scroll animations
     function initScrollAnimations() {
-        // Check for reduced motion preference
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             document
-                .querySelectorAll(
-                    ".process-card, .pricing-card, .example-card, .faq-item, .animate-on-scroll",
-                )
+                .querySelectorAll(".animate-card, .animate-fade-up")
                 .forEach((el) => {
                     (el as HTMLElement).style.opacity = "1";
                     (el as HTMLElement).style.transform = "none";
@@ -891,50 +1458,40 @@ import Layout from "../layouts/Layout.astro";
             return;
         }
 
-        const observerOptions = {
-            root: null,
-            rootMargin: "0px 0px -80px 0px",
-            threshold: 0.1,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("in-view");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        const animatedElements = document.querySelectorAll(
-            ".process-card, .pricing-card, .example-card, .faq-item, .animate-on-scroll",
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { root: null, rootMargin: "0px 0px -80px 0px", threshold: 0.1 },
         );
 
-        animatedElements.forEach((el) => {
-            observer.observe(el);
-        });
+        document
+            .querySelectorAll(".animate-card, .animate-fade-up")
+            .forEach((el) => observer.observe(el));
     }
 
-    // Navigation scroll effects
+    // Nav scroll effect
     function initNavScroll() {
         const nav = document.getElementById("mainNav");
         if (!nav) return;
 
-        let lastScroll = 0;
         let ticking = false;
-
         window.addEventListener("scroll", () => {
             if (!ticking) {
                 window.requestAnimationFrame(() => {
-                    const currentScroll = window.pageYOffset;
-
-                    if (currentScroll > 50) {
-                        nav.classList.add("scrolled");
+                    if (window.pageYOffset > 50) {
+                        nav.classList.add("!border-stone", "shadow-brand-sm");
                     } else {
-                        nav.classList.remove("scrolled");
+                        nav.classList.remove(
+                            "!border-stone",
+                            "shadow-brand-sm",
+                        );
                     }
-
-                    lastScroll = currentScroll;
                     ticking = false;
                 });
                 ticking = true;
@@ -942,7 +1499,7 @@ import Layout from "../layouts/Layout.astro";
         });
     }
 
-    // Animate counter on scroll into view
+    // Counter animation
     function initCounterAnimation() {
         const counter = document.getElementById("signupCount");
         if (!counter) return;
@@ -973,82 +1530,107 @@ import Layout from "../layouts/Layout.astro";
         duration: number,
     ) {
         const startTime = performance.now();
-
         function update(currentTime: number) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-
-            // Ease out expo
             const easeOut =
                 progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-            const current = Math.floor(start + (end - start) * easeOut);
-
-            element.textContent = String(current);
-
-            if (progress < 1) {
-                requestAnimationFrame(update);
-            }
+            element.textContent = String(
+                Math.floor(start + (end - start) * easeOut),
+            );
+            if (progress < 1) requestAnimationFrame(update);
         }
-
         requestAnimationFrame(update);
     }
 
-    // Form field focus effects
-    function initFormFieldEffects() {
-        document
-            .querySelectorAll(".form-field input, .form-field select")
-            .forEach((field) => {
-                // Check initial state
-                const input = field as HTMLInputElement;
-                if (input.value) {
-                    input.parentElement?.classList.add("filled");
-                }
-
-                field.addEventListener("focus", function (this: HTMLElement) {
-                    this.parentElement?.classList.add("focused");
-                });
-
-                field.addEventListener(
-                    "blur",
-                    function (this: HTMLInputElement) {
-                        this.parentElement?.classList.remove("focused");
-                        if (this.value) {
-                            this.parentElement?.classList.add("filled");
-                        } else {
-                            this.parentElement?.classList.remove("filled");
-                        }
-                    },
-                );
-            });
-    }
-
-    // Subtle parallax effects
+    // Parallax
     function initParallaxEffects() {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
             return;
 
-        const heroImage = document.querySelector(
-            ".hero-image-container",
-        ) as HTMLElement;
+        const heroImage = document.querySelector(".hero-frame") as HTMLElement;
+        if (!heroImage) return;
 
-        if (heroImage) {
-            let ticking = false;
+        let ticking = false;
+        window.addEventListener("scroll", () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    if (scrolled < window.innerHeight) {
+                        heroImage.style.transform = `translateY(${scrolled * 0.15}px)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    }
 
-            window.addEventListener("scroll", () => {
-                if (!ticking) {
-                    window.requestAnimationFrame(() => {
-                        const scrolled = window.pageYOffset;
-                        const rate = scrolled * 0.15;
+    // Sticky CTA on mobile
+    function initStickyCta() {
+        const stickyCta = document.getElementById("stickyCta");
+        const hero = document.querySelector("#main-content") as HTMLElement;
+        const formSection = document.getElementById("formularz");
+        if (!stickyCta || !hero || !formSection) return;
 
-                        if (scrolled < window.innerHeight) {
-                            heroImage.style.transform = `translateY(${rate}px)`;
-                        }
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.target === hero) {
+                        stickyCta.classList.toggle(
+                            "visible",
+                            !entry.isIntersecting,
+                        );
+                    }
+                    if (entry.target === formSection && entry.isIntersecting) {
+                        stickyCta.classList.remove("visible");
+                    }
+                });
+            },
+            { threshold: 0.1 },
+        );
 
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            });
-        }
+        observer.observe(hero);
+        observer.observe(formSection);
     }
 </script>
+
+<style>
+    /* Mobile nav overrides — scoped to this page */
+    @media (max-width: 767px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            align-items: stretch;
+            background: rgba(253, 251, 247, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid theme("colors.stone");
+            padding: 0.5rem clamp(1.5rem, 5vw, 4rem) 1.5rem;
+            box-shadow: 0 8px 30px rgba(45, 41, 38, 0.08);
+            gap: 0;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 1rem 0;
+            border-bottom: 1px solid theme("colors.stone");
+        }
+
+        .nav-links a:last-child {
+            border-bottom: none;
+        }
+
+        #navHamburger {
+            display: flex;
+        }
+    }
+</style>

@@ -5,7 +5,13 @@
       "Bash(timeout /t 3)",
       "Bash(npm create astro@latest:*)",
       "Bash(npm install)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npx astro build)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "WebSearch",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs"
     ]
   }
 }
