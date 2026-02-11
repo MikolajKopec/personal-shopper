@@ -24,8 +24,8 @@ import Layout from "../layouts/Layout.astro";
         <span class="relative z-10"
             >Pierwsza grupa startuje w <strong class="text-brass-light"
                 >marcu 2026</strong
-            >. Zostało <strong class="spots-counter text-brass-light"
-                >12 miejsc</strong
+            >. Limit: <strong class="text-brass-light"
+                >15 osób</strong
             >.</span
         >
     </div>
@@ -640,31 +640,25 @@ import Layout from "../layouts/Layout.astro";
             <div class="animate-fade-up">
                 <!-- Founder Photo -->
                 <div
-                    class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-8 border-[3px] border-brass opacity-90"
+                    class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-8 border-[3px] border-brass opacity-90 bg-sand flex items-center justify-center"
                 >
-                    <img
-                        src="/img/founders.jpg"
-                        alt="Mikołaj i Nikola — założyciele Săn Style"
-                        width="96"
-                        height="96"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                    />
+                    <span class="font-display text-2xl text-brass tracking-wider">M&N</span>
                 </div>
                 <div class="note-quote-mark relative">
                     <p
                         class="font-display text-[1.375rem] italic leading-relaxed text-espresso mb-6 relative"
                     >
-                        Zakochaliśmy się w wietnamskiej modzie podczas podróży.
-                        Jakość tkanin, ręczne wykonanie, unikatowe kroje — nic z
-                        tego nie znajdziesz w europejskich sieciówkach.
-                        Pomyśleliśmy: dlaczego nikt tego nie robi?
+                        Nikola jest Polką z wietnamskimi korzeniami — zna język,
+                        kulturę i wie, gdzie szukać najlepszych tkanin. Od lat
+                        fascynuje nas wietnamska moda: jakość jedwabiu, ręczne
+                        wykończenie, kroje, których nie znajdziesz w żadnej
+                        europejskiej sieciówce.
                     </p>
                     <p
                         class="font-display text-[1.375rem] italic leading-relaxed text-espresso mb-6 relative"
                     >
-                        W marcu 2026 lecimy do Ho Chi Minh City, żeby osobiście
-                        spotkać się ze stylistkami i wybrać najlepsze butiki.
+                        W marcu lecimy do Ho Chi Minh City — osobiście spotkamy
+                        się ze stylistkami i wybierzemy najlepsze butiki.
                         Szukamy pierwszych 15 osób, które chcą to przetestować
                         razem z nami.
                     </p>
@@ -750,9 +744,9 @@ import Layout from "../layouts/Layout.astro";
                         <span class="text-base text-taupe">zł</span>
                     </div>
                     <p class="text-sm text-taupe mb-10">
-                        Ty ustalasz budżet — stylistka dobiera ubrania w jego
-                        ramach. W cenie jest wszystko: ubrania, import, cło, VAT
-                        i dostawa pod drzwi.
+                        Ty ustalasz budżet — stylistka dobiera 3–5 elementów
+                        w jego ramach. W cenie jest wszystko: ubrania, import,
+                        cło, VAT i dostawa pod drzwi.
                     </p>
                     <ul
                         class="pricing-list space-y-2 text-[0.9375rem] text-white/70"
@@ -833,10 +827,10 @@ import Layout from "../layouts/Layout.astro";
         <div
             class="max-w-container mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 text-center sm:text-left"
         >
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4" id="signupCountWrapper" style="display:none">
                 <span
                     class="font-display text-[2.5rem] text-brass leading-none"
-                    id="signupCount">47</span
+                    id="signupCount">0</span
                 >
                 <span class="text-[0.9375rem] text-warm-gray"
                     >osób na liście oczekujących</span
@@ -844,10 +838,13 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <div class="proof-divider max-sm:!w-16 max-sm:!h-px"></div>
             <div class="flex items-center gap-4 flex-wrap justify-center">
-                <span
-                    class="font-display italic text-[1.0625rem] text-espresso max-w-[400px]"
-                    >"Wietnam staje się nowym hubem azjatyckiej mody —
-                    projektanci ubierają Beyoncé i Blackpink"</span
+                <a
+                    href="https://restofworld.org/2024/vietnam-fashion-brands/"
+                    target="_blank"
+                    rel="noopener"
+                    class="font-display italic text-[1.0625rem] text-espresso max-w-[400px] hover:text-brass-dark transition-colors"
+                    >"Wietnamska moda rośnie w siłę — projektanci ubierają
+                    Beyoncé, Blackpink i Bellę Hadid"</a
                 >
                 <span class="text-xs text-warm-gray whitespace-nowrap"
                     >— Rest of World</span
@@ -984,9 +981,7 @@ import Layout from "../layouts/Layout.astro";
                         >Limit miejsc</span
                     >
                     <span
-                        >Pierwsza grupa: <strong>15 osób</strong>. Zostało: <strong
-                            class="spots-remaining text-brass-light">12</strong
-                        >.</span
+                        >Pierwsza grupa: <strong>15 osób</strong>. Zapisy otwarte.</span
                     >
                 </div>
                 <h2
@@ -995,8 +990,8 @@ import Layout from "../layouts/Layout.astro";
                     Zapisz się na listę
                 </h2>
                 <p class="text-warm-gray max-w-[420px] mx-auto">
-                    Zostaw kontakt — odezwiemy się w ciągu 48h z detalami i
-                    krótką ankietą.
+                    Zostaw kontakt — odezwiemy się z detalami przed startem
+                    pierwszej grupy.
                 </p>
             </div>
 
@@ -1166,7 +1161,7 @@ import Layout from "../layouts/Layout.astro";
                             ><circle cx="12" cy="12" r="10"></circle><path
                                 d="M12 6v6l4 2"></path></svg
                         >
-                        <span>Odpowiedź w 48h</span>
+                        <span>Odpowiemy przed startem</span>
                     </div>
                 </div>
             </form>
@@ -1175,7 +1170,7 @@ import Layout from "../layouts/Layout.astro";
                 <p
                     class="text-[0.8125rem] text-warm-gray max-w-[380px] mx-auto"
                 >
-                    Po zapisie wyślemy krótką ankietę — styl, wymiary,
+                    Przed startem wyślemy krótką ankietę — styl, wymiary,
                     preferencje. Na tej podstawie dopasujemy dla Ciebie
                     stylistkę.
                 </p>
@@ -1271,11 +1266,11 @@ import Layout from "../layouts/Layout.astro";
                 Super, jesteś na liście!
             </h3>
             <p class="text-warm-gray mb-4">
-                Sprawdź email — wyślemy Ci potwierdzenie i krótką ankietę,
-                żebyśmy mogły lepiej Cię poznać.
+                Damy Ci znać gdy zbliża się start pierwszej grupy.
+                Przed startem wyślemy krótką ankietę o Twoim stylu.
             </p>
             <p class="text-sm text-warm-gray mb-10">
-                Odezwiemy się w ciągu 48h.
+                Trzymaj kciuki za nasz wyjazd do Wietnamu w marcu!
             </p>
             <button
                 class="py-4 px-10 bg-espresso text-ivory text-[0.9375rem] font-medium rounded-full transition-all duration-[0.4s] ease-out-expo hover:bg-brass-dark hover:-translate-y-0.5"
@@ -1523,28 +1518,33 @@ import Layout from "../layouts/Layout.astro";
         });
     }
 
-    // Counter animation
+    // Counter — fetch real count from GetResponse API
     function initCounterAnimation() {
         const counter = document.getElementById("signupCount");
-        if (!counter) return;
+        const wrapper = document.getElementById("signupCountWrapper");
+        if (!counter || !wrapper) return;
 
-        const targetNumber = parseInt(counter.textContent || "0");
-        let hasAnimated = false;
+        fetch("/api/stats")
+            .then((res) => res.json())
+            .then((data) => {
+                const count = data.count || 0;
+                if (count === 0) return; // don't show if no signups yet
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting && !hasAnimated) {
-                        hasAnimated = true;
-                        animateNumber(counter, 0, targetNumber, 1800);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.5 },
-        );
-
-        observer.observe(counter);
+                wrapper.style.display = "";
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                animateNumber(counter, 0, count, 1800);
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    { threshold: 0.5 },
+                );
+                observer.observe(counter);
+            })
+            .catch(() => {}); // silently fail — hide counter
     }
 
     function animateNumber(
