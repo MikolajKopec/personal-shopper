@@ -9,7 +9,6 @@ import SignupForm from '../components/SignupForm.astro';
 import Footer from '../components/Footer.astro';
 import QualifiedModal from '../components/QualifiedModal.astro';
 import NotQualifiedModal from '../components/NotQualifiedModal.astro';
-import PreorderSuccessModal from '../components/PreorderSuccessModal.astro';
 ---
 
 <Layout
@@ -28,7 +27,6 @@ import PreorderSuccessModal from '../components/PreorderSuccessModal.astro';
 
   <QualifiedModal />
   <NotQualifiedModal />
-  <PreorderSuccessModal />
 
   <script>
     import { actions } from 'astro:actions';
@@ -88,7 +86,6 @@ import PreorderSuccessModal from '../components/PreorderSuccessModal.astro';
     // Close buttons
     document.getElementById('modal-qualified-close')?.addEventListener('click', () => hideModal('modal-qualified'));
     document.getElementById('modal-not-qualified-close')?.addEventListener('click', () => hideModal('modal-not-qualified'));
-    document.getElementById('modal-preorder-success-close')?.addEventListener('click', () => hideModal('modal-preorder-success'));
 
     // --- Form submission ---
     let submittedEmail = '';
@@ -136,40 +133,32 @@ import PreorderSuccessModal from '../components/PreorderSuccessModal.astro';
       }
     });
 
-    // --- Preorder (Stripe Checkout) ---
-    document.getElementById('preorder-btn')?.addEventListener('click', async () => {
-      const btn = document.getElementById('preorder-btn') as HTMLButtonElement;
+    // --- Preorder interest (tag in GetResponse) ---
+    document.getElementById('preorder-interest-btn')?.addEventListener('click', async () => {
+      const btn = document.getElementById('preorder-interest-btn') as HTMLButtonElement;
       btn.disabled = true;
-      btn.textContent = 'Przekierowuję...';
+      btn.textContent = 'Zapisuję...';
 
       try {
-        const res = await fetch('/api/create-checkout', {
+        const res = await fetch('/api/tag-preorder', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: submittedEmail }),
         });
 
-        const { url, error } = await res.json();
-
-        if (url) {
-          window.location.href = url;
+        if (res.ok) {
+          btn.textContent = 'Gotowe! Odezwiemy się ✓';
+          btn.classList.remove('bg-brass', 'hover:bg-brass-dark');
+          btn.classList.add('bg-success');
+          setTimeout(() => hideModal('modal-qualified'), 2000);
         } else {
           btn.disabled = false;
-          btn.textContent = 'Rezerwuję miejsce — 199 PLN';
-          console.error('Checkout error:', error);
+          btn.textContent = 'Chcę zarezerwować miejsce';
         }
-      } catch (err) {
+      } catch {
         btn.disabled = false;
-        btn.textContent = 'Rezerwuję miejsce — 199 PLN';
-        console.error('Checkout error:', err);
+        btn.textContent = 'Chcę zarezerwować miejsce';
       }
     });
-
-    // --- Handle Stripe redirect ---
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('preorder') === 'success') {
-      showModal('modal-preorder-success');
-      window.history.replaceState({}, '', window.location.pathname);
-    }
   </script>
 </Layout>
