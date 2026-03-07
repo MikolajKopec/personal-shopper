@@ -5,16 +5,171 @@ import Hero from '../components/Hero.astro';
 import PainPoints from '../components/PainPoints.astro';
 import Bridge from '../components/Bridge.astro';
 import HowItWorks from '../components/HowItWorks.astro';
+import SignupForm from '../components/SignupForm.astro';
 import Footer from '../components/Footer.astro';
+import QualifiedModal from '../components/QualifiedModal.astro';
+import NotQualifiedModal from '../components/NotQualifiedModal.astro';
+import PreorderSuccessModal from '../components/PreorderSuccessModal.astro';
 ---
 
-<Layout title="REFL. — Twoja prywatna stylistka">
+<Layout
+  title="REFL. — Twoja prywatna stylistka"
+  description="Prywatna stylistka dobierze dla Ciebie ubrania od projektantów, których w Polsce nie znajdziesz. Zapisz się na listę."
+>
   <Nav />
   <main>
     <Hero />
     <PainPoints />
     <Bridge />
     <HowItWorks />
+    <SignupForm />
   </main>
   <Footer />
+
+  <QualifiedModal />
+  <NotQualifiedModal />
+  <PreorderSuccessModal />
+
+  <script>
+    import { actions } from 'astro:actions';
+
+    // --- Scroll reveal ---
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
+    revealElements.forEach((el) => revealObserver.observe(el));
+
+    // --- Modal helpers ---
+    function showModal(id: string) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      requestAnimationFrame(() => modal.classList.add('active'));
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideModal(id: string) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.classList.remove('active');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    // Close modals on overlay click
+    document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) hideModal(overlay.id);
+      });
+    });
+
+    // Close modals on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach((m) => {
+          hideModal((m as HTMLElement).id);
+        });
+      }
+    });
+
+    // Close buttons
+    document.getElementById('modal-qualified-close')?.addEventListener('click', () => hideModal('modal-qualified'));
+    document.getElementById('modal-not-qualified-close')?.addEventListener('click', () => hideModal('modal-not-qualified'));
+    document.getElementById('modal-preorder-success-close')?.addEventListener('click', () => hideModal('modal-preorder-success'));
+
+    // --- Form submission ---
+    let submittedEmail = '';
+
+    const form = document.getElementById('signup-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Clear errors
+      form.querySelectorAll('.error-msg').forEach((el) => el.classList.add('hidden'));
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Zapisuję...';
+
+      const formData = new FormData(form);
+      const { data, error } = await actions.signup(formData);
+
+      if (error) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Chcę to sprawdzić';
+
+        if (error.fields) {
+          for (const [field, messages] of Object.entries(error.fields)) {
+            const errorEl = form.querySelector(`.error-msg[data-field="${field}"]`) as HTMLElement;
+            if (errorEl && messages?.length) {
+              errorEl.textContent = messages[0];
+              errorEl.classList.remove('hidden');
+            }
+          }
+        }
+        return;
+      }
+
+      submittedEmail = formData.get('email') as string;
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Chcę to sprawdzić';
+
+      if (data?.qualified) {
+        showModal('modal-qualified');
+      } else {
+        showModal('modal-not-qualified');
+      }
+    });
+
+    // --- Preorder (Stripe Checkout) ---
+    document.getElementById('preorder-btn')?.addEventListener('click', async () => {
+      const btn = document.getElementById('preorder-btn') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.textContent = 'Przekierowuję...';
+
+      try {
+        const res = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: submittedEmail }),
+        });
+
+        const { url, error } = await res.json();
+
+        if (url) {
+          window.location.href = url;
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Rezerwuję miejsce — 199 PLN';
+          console.error('Checkout error:', error);
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Rezerwuję miejsce — 199 PLN';
+        console.error('Checkout error:', err);
+      }
+    });
+
+    // --- Handle Stripe redirect ---
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('preorder') === 'success') {
+      showModal('modal-preorder-success');
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  </script>
 </Layout>
