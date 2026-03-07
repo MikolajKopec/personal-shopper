@@ -1,8 +1,8 @@
-# Săn Style — Biznesplan
+# REFL. — Biznesplan
 
 ## 1. Streszczenie
 
-Săn Style to usługa personal stylingu łącząca polskie klientki z wietnamskimi stylistkami. Klientka otrzymuje spersonalizowane stylizacje z wietnamskich butików premium — jedwab, len, bawełna organiczna — w cenach znacząco niższych niż europejskie sieciówki. Model: P1 (usługa stylistyczna za 990 PLN) + P2 (sprzedaż ubrań z 50% marżą).
+REFL. to usługa personal stylingu łącząca polskie klientki z wietnamskimi stylistkami. Klientka otrzymuje spersonalizowane stylizacje z wietnamskich butików premium — jedwab, len, bawełna organiczna — w cenach znacząco niższych niż europejskie sieciówki. Model: P1 (usługa stylistyczna za 990 PLN) + P2 (sprzedaż ubrań z 50% marżą).
 
 ## 2. Problem i rozwiązanie
 
@@ -68,7 +68,7 @@ Rozwiązanie: Bezpośredni dostęp do wietnamskich butików premium przez osobis
 ## 7. Marketing i dystrybucja
 
 ### Strategia pre-launch (przed Wietnamem):
-- Landing page ze zbieraniem maili (sanstyle.pl)
+- Landing page ze zbieraniem maili (refl.pl)
 - Social media buildup (Instagram + TikTok)
 - Organic-first: zero płatnej reklamy w MVP
 
@@ -93,7 +93,7 @@ Rozwiązanie: Bezpośredni dostęp do wietnamskich butików premium przez osobis
 
 ### Logistyka:
 - Wysyłka lotnicza z Wietnamu
-- Odprawa celna po stronie Săn Style
+- Odprawa celna po stronie REFL.
 - Cło + VAT wliczone w cenę P2
 - Dostawa door-to-door w Polsce
 

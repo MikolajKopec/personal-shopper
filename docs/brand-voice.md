@@ -1,10 +1,10 @@
-# Brand Voice Guide — Săn Style
+# Brand Voice Guide — REFL.
 
 ## Esencja marki
 
 **Affordable luxury w naturalnym opakowaniu.**
 
-Săn Style to marka, która mówi: "możesz mieć piękne, jakościowe ubrania z naturalnych tkanin bez przepłacania i bez pretensji". Nie jesteśmy cold luxury. Nie jesteśmy fast fashion. Jesteśmy koleżanką, która znalazła sposób na lepsze ubrania.
+REFL. to marka, która mówi: "możesz mieć piękne, jakościowe ubrania z naturalnych tkanin bez przepłacania i bez pretensji". Nie jesteśmy cold luxury. Nie jesteśmy fast fashion. Jesteśmy koleżanką, która znalazła sposób na lepsze ubrania.
 
 ## Ton głosu
 
@@ -86,7 +86,7 @@ Săn Style to marka, która mówi: "możesz mieć piękne, jakościowe ubrania z
 "3 stylizacje z Wietnamu, które kosztowały mniej niż jedna sukienka z COS. Jedwab, len, bawełna — naturalne tkaniny, ręczne wykonanie. Moja stylistka z Ho Chi Minh City dobrała wszystko pod mój styl. Chcesz zobaczyć proces? Link w bio."
 
 ### TikTok (segment A):
-"POV: twoja stylistka z wietnamu wysyła ci propozycje i każda jest *chef's kiss* 🤌 jedwab za 200zł, koszulka lniana za 150zł... czy sieciówki was nie wkurzają tak jak mnie? #sanstyle #wietnam #moda"
+"POV: twoja stylistka z wietnamu wysyła ci propozycje i każda jest *chef's kiss* 🤌 jedwab za 200zł, koszulka lniana za 150zł... czy sieciówki was nie wkurzają tak jak mnie? #refl #wietnam #moda"
 
 ### Instagram Story (oba segmenty):
 "Właśnie otworzyłam paczkę z Wietnamu 📦 Pokażę wam wszystko po kolei..."
@@ -96,12 +96,12 @@ Săn Style to marka, która mówi: "możesz mieć piękne, jakościowe ubrania z
 
 ## Brand name
 
-**Săn Style**
+**REFL.**
 - "Săn" (wiet.) = polować, szukać — pasuje do "hunt for style"
 - Logo mark: 山 (chiński/japoński kanji = góra, ale też wygląda jak "san")
-- Domena planowana: sanstyle.pl
-- Email: hello@sanstyle.pl
-- Instagram: @sanstyle.pl
+- Domena planowana: refl.pl
+- Email: hello@refl.pl
+- Instagram: @refl.pl
 
 ---
 

@@ -1,4 +1,4 @@
-# Model Finansowy V3 — Săn Style
+# Model Finansowy V3 — REFL.
 
 ## Zmienne kluczowe
 

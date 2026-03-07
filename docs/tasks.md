@@ -1,4 +1,4 @@
-# Săn Style — Lista zadań
+# REFL. — Lista zadań
 
 *Ostatnia aktualizacja: 7 lutego 2026*
 
@@ -18,8 +18,8 @@
 ### Priorytet: Krytyczne
 - [ ] Deploy landing page na Vercel / Hetzner
 - [ ] Podłączyć mailing (formularz → baza email)
-- [ ] Setup Instagram (@sanstyle.pl)
-- [ ] Setup TikTok (@sanstyle.pl)
+- [ ] Setup Instagram (@refl.pl)
+- [ ] Setup TikTok (@refl.pl)
 - [ ] Rejestracja JDG (Mikołaj)
 
 ### Priorytet: Ważne
