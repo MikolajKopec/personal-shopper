@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://refl.pl',
   output: 'static',
   integrations: [tailwind()],
   adapter: vercel({

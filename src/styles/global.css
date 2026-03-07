@@ -69,6 +69,86 @@
 .hero-delay-4 { animation-delay: 0.7s; }
 
 /* ============================================
+   Card hover lift
+   ============================================ */
+
+.card-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(45, 41, 38, 0.10);
+}
+
+/* ============================================
+   CTA glow + lift
+   ============================================ */
+
+.cta-glow {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease,
+              color 0.3s ease;
+}
+
+.cta-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 149, 110, 0.25);
+}
+
+/* ============================================
+   Nav scroll shadow
+   ============================================ */
+
+.nav-scrolled {
+  box-shadow: 0 1px 12px rgba(45, 41, 38, 0.06);
+}
+
+/* ============================================
+   Animated underline links
+   ============================================ */
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   Section divider ✦
+   ============================================ */
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.section-divider::before {
+  content: '✦';
+  font-size: 0.75rem;
+  color: theme('colors.taupe');
+  letter-spacing: 0.5em;
+  opacity: 0.6;
+}
+
+/* ============================================
    Modal
    ============================================ */
 

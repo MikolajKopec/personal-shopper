@@ -12,7 +12,7 @@ Aplikacja główna (ankieta) znajduje się w osobnym repo `app-refl`.
 - **Fonty**: Playfair Display (display) + DM Sans (body)
 - **Paleta**: warm neutrals (ivory/sand/stone/taupe/espresso) + brass/gold accenty
 - **Mailing**: jeszcze nie wybrane (formularz loguje do console.log)
-- **Domena**: TBD
+- **Domena**: refl.pl
 
 ## Powiązane repozytoria
 

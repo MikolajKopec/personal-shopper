@@ -1,7 +1,7 @@
 ---
 const cards = [
   'Otwierasz szafę i nie masz co na siebie.',
-  'Scrollujesz Zary trzecią godzinę — i nic nie pasuje.',
+  'Scrollujesz Zarę trzecią godzinę — i nic nie pasuje.',
   'Kupujesz to samo co wszystkie — i czujesz „meh".',
 ];
 ---
@@ -14,7 +14,7 @@ const cards = [
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {cards.map((text, i) => (
-        <div class={`reveal reveal-delay-${i + 1} bg-white rounded-2xl p-8 shadow-brand-sm`}>
+        <div class={`reveal reveal-delay-${i + 1} bg-white rounded-2xl p-8 shadow-brand-sm card-lift`}>
           <p class="font-body text-espresso text-[1.05rem] leading-relaxed">{text}</p>
         </div>
       ))}

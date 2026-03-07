@@ -18,9 +18,13 @@ import NotQualifiedModal from '../components/NotQualifiedModal.astro';
   <Nav />
   <main>
     <Hero />
+    <div class="section-divider"></div>
     <PainPoints />
+    <div class="section-divider"></div>
     <Bridge />
+    <div class="section-divider"></div>
     <HowItWorks />
+    <div class="section-divider"></div>
     <SignupForm />
   </main>
   <Footer />
@@ -30,6 +34,12 @@ import NotQualifiedModal from '../components/NotQualifiedModal.astro';
 
   <script>
     import { actions } from 'astro:actions';
+
+    // --- Nav scroll shadow ---
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav?.classList.toggle('nav-scrolled', window.scrollY > 20);
+    }, { passive: true });
 
     // --- Scroll reveal ---
     const revealElements = document.querySelectorAll('.reveal');
