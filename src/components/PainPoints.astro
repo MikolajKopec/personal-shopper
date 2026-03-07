@@ -1,0 +1,23 @@
+---
+const cards = [
+  'Otwierasz szafę i nie masz co na siebie.',
+  'Scrollujesz Zary trzecią godzinę — i nic nie pasuje.',
+  'Kupujesz to samo co wszystkie — i czujesz „meh".',
+];
+---
+
+<section class="px-6 py-20 md:py-28">
+  <div class="max-w-narrow mx-auto">
+    <h2 class="reveal font-display text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink text-center mb-14">
+      Znasz to?
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {cards.map((text, i) => (
+        <div class={`reveal reveal-delay-${i + 1} bg-white rounded-2xl p-8 shadow-brand-sm`}>
+          <p class="font-body text-espresso text-[1.05rem] leading-relaxed">{text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

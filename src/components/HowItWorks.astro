@@ -1,0 +1,29 @@
+---
+const steps = [
+  { num: '01', title: 'Opowiedz o sobie', desc: 'Krótka ankieta — ok. 10 min' },
+  { num: '02', title: 'Twoja stylistka dobiera', desc: 'Moodboard, propozycje, iteracje — aż będzie idealnie.' },
+  { num: '03', title: 'Paczka pod Twoje drzwi', desc: 'Ubrania gotowe do noszenia.' },
+];
+---
+
+<section class="px-6 py-20 md:py-28">
+  <div class="max-w-narrow mx-auto">
+    <h2 class="reveal font-display text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink text-center mb-14">
+      Jak to działa?
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+      {steps.map((step, i) => (
+        <div class={`reveal reveal-delay-${i + 1} text-center`}>
+          <span class="block font-display text-4xl text-brass mb-4">{step.num}</span>
+          <h3 class="font-body font-medium text-espresso text-lg mb-2">{step.title}</h3>
+          <p class="font-body text-warm-gray text-sm leading-relaxed">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="reveal text-center mt-14 font-body text-sm text-warm-gray">
+      Usługa stylizacji od 990 PLN
+    </p>
+  </div>
+</section>
