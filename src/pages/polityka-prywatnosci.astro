@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Polityka prywatności — REFL." description="Polityka prywatności serwisu REFL.. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.">
+<Layout title="Polityka prywatności — REFL." description="Polityka prywatności serwisów refl.pl i app.refl.pl. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.">
     <nav class="flex items-center gap-10 py-4 px-[clamp(1.5rem,5vw,4rem)] bg-ivory border-b border-stone">
         <a href="/" class="flex items-center gap-2 group">
             <span class="text-[1.75rem] text-brass font-light transition-transform duration-[0.4s] ease-out-expo group-hover:-rotate-[5deg] group-hover:scale-110">✦</span>
@@ -14,12 +14,19 @@ import Layout from "../layouts/Layout.astro";
     <main class="py-16 sm:py-24 px-[clamp(1.5rem,5vw,4rem)]">
         <article class="max-w-[720px] mx-auto prose-san">
             <h1 class="font-display font-normal text-[clamp(2rem,4vw,3rem)] mb-4">Polityka prywatności</h1>
-            <p class="text-warm-gray mb-12">Ostatnia aktualizacja: 11 lutego 2026</p>
+            <p class="text-warm-gray mb-4">Ostatnia aktualizacja: 9 marca 2026</p>
+            <p class="text-[0.875rem] text-warm-gray mb-12">
+                Niniejsza polityka obejmuje serwisy:
+                <strong class="text-espresso">refl.pl</strong> (strona informacyjna) oraz
+                <strong class="text-espresso">app.refl.pl</strong> (aplikacja ankietowa).
+            </p>
 
+            <!-- 1. Administrator -->
             <section class="mb-10">
                 <h2 class="font-display text-xl mb-4 text-espresso">1. Administrator danych</h2>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
-                    Administratorem Twoich danych osobowych jest Nikola Czaplicka,
+                    Administratorem Twoich danych osobowych jest
+                    <strong class="text-espresso">Nikola Czaplicka</strong>,
                     zamieszkała w Polsce.
                 </p>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4 italic">
@@ -31,64 +38,179 @@ import Layout from "../layouts/Layout.astro";
                 </p>
             </section>
 
+            <!-- 2. Jakie dane -->
             <section class="mb-10">
                 <h2 class="font-display text-xl mb-4 text-espresso">2. Jakie dane zbieramy</h2>
+
+                <h3 class="text-base font-semibold text-espresso mb-3">2.1 Formularz zapisu (refl.pl)</h3>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
-                    Przez formularz zapisu na listę oczekujących zbieramy:
+                    Przez formularz na stronie głównej zbieramy:
                 </p>
                 <ul class="list-disc pl-6 space-y-2 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
-                    <li><strong class="text-espresso">Imię</strong> — żebyśmy mogli się do Ciebie zwracać</li>
-                    <li><strong class="text-espresso">Adres email</strong> — do kontaktu i wysyłki informacji o usłudze</li>
-                    <li><strong class="text-espresso">Rozmiar ubrań</strong> — żebyśmy mogli ocenić dopasowanie do aktualnej oferty</li>
-                    <li><strong class="text-espresso">Wzrost</strong> — żebyśmy mogli ocenić dopasowanie do aktualnej oferty</li>
+                    <li><strong class="text-espresso">Imię</strong> — żebyśmy mogły się do Ciebie zwracać</li>
+                    <li><strong class="text-espresso">Adres email</strong> — do kontaktu i informowania o usłudze</li>
+                    <li><strong class="text-espresso">Rozmiar ubrań</strong> (XS–XL) — do oceny dopasowania do aktualnej oferty</li>
+                    <li><strong class="text-espresso">Wzrost</strong> (cm) — do oceny dopasowania do aktualnej oferty</li>
                 </ul>
+
+                <h3 class="text-base font-semibold text-espresso mb-3 mt-6">2.2 Ankieta stylistyczna (app.refl.pl)</h3>
+                <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    Przez ankietę zbieramy dane niezbędne do realizacji usługi stylistycznej:
+                </p>
+
+                <h4 class="text-sm font-semibold text-espresso mb-2 mt-4">Dane identyfikacyjne</h4>
+                <ul class="list-disc pl-6 space-y-1 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    <li>Imię, adres email</li>
+                </ul>
+
+                <h4 class="text-sm font-semibold text-espresso mb-2 mt-4">Preferencje stylistyczne</h4>
+                <ul class="list-disc pl-6 space-y-1 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    <li>Cele stylizacji, estetyka i ulubione marki</li>
+                    <li>Preferowane materiały, kolory, wzory i dopasowanie</li>
+                    <li>Linki inspiracyjne, style do unikania</li>
+                </ul>
+
+                <h4 class="text-sm font-semibold text-espresso mb-2 mt-4">Budżet</h4>
+                <ul class="list-disc pl-6 space-y-1 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    <li>Budżet na zakupy (PLN), preferowana liczba stylizacji</li>
+                </ul>
+
+                <h4 class="text-sm font-semibold text-espresso mb-2 mt-4">Wymiary ciała</h4>
+                <ul class="list-disc pl-6 space-y-1 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    <li>Obwody: biust, klatka piersiowa, ramiona, szyja, talia, biodra, udo, łydka</li>
+                    <li>Długości: ręka, tułów, noga (wewnętrzna)</li>
+                    <li>Wzrost, rozmiar buta, rozmiar biustonosza i odzieży (opcjonalnie)</li>
+                    <li>Dodatkowe uwagi o sylwetce (opcjonalnie)</li>
+                </ul>
+
+                <h4 class="text-sm font-semibold text-espresso mb-2 mt-4">Nagranie wideo</h4>
+                <ul class="list-disc pl-6 space-y-1 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    <li>Krótki film prezentujący sylwetkę — służy wyłącznie do lepszego dopasowania ubrań przez stylistkę</li>
+                </ul>
+
+                <div class="rounded-lg border border-stone/30 bg-ivory p-4 mt-4">
+                    <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
+                        <strong class="text-espresso">Ważne:</strong> Wymiary ciała
+                        <strong class="text-espresso">nie są</strong> danymi biometrycznymi
+                        w rozumieniu art. 9 RODO — nie służą do identyfikacji tożsamości.
+                        Nagranie wideo jest przetwarzane wyłącznie w celu realizacji usługi
+                        stylistycznej, nie do identyfikacji biometrycznej.
+                    </p>
+                </div>
             </section>
 
+            <!-- 3. Cel i podstawa -->
             <section class="mb-10">
                 <h2 class="font-display text-xl mb-4 text-espresso">3. Cel i podstawa przetwarzania</h2>
-                <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
-                    Twoje dane przetwarzamy w następujących celach:
-                </p>
-                <ul class="list-disc pl-6 space-y-2 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
-                    <li>
-                        <strong class="text-espresso">Kontakt w sprawie usługi stylistycznej</strong> —
-                        na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO)
-                    </li>
-                    <li>
-                        <strong class="text-espresso">Wysyłka informacji o usłudze i aktualizacji</strong> —
-                        na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO)
-                    </li>
-                    <li>
-                        <strong class="text-espresso">Realizacja usługi</strong> —
-                        na podstawie umowy lub działań przed jej zawarciem (art. 6 ust. 1 lit. b RODO)
-                    </li>
-                </ul>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="border-b border-stone/30 text-espresso">
+                                <th class="pb-2 pr-4 font-semibold">Cel</th>
+                                <th class="pb-2 font-semibold">Podstawa prawna</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-warm-gray">
+                            <tr class="border-b border-stone/10">
+                                <td class="py-2 pr-4">Kontakt w sprawie usługi</td>
+                                <td class="py-2">Art. 6(1)(a) RODO — zgoda</td>
+                            </tr>
+                            <tr class="border-b border-stone/10">
+                                <td class="py-2 pr-4">Realizacja usługi stylistycznej</td>
+                                <td class="py-2">Art. 6(1)(b) RODO — wykonanie umowy</td>
+                            </tr>
+                            <tr class="border-b border-stone/10">
+                                <td class="py-2 pr-4">Ocena dopasowania do oferty</td>
+                                <td class="py-2">Art. 6(1)(b) RODO — działania przed zawarciem umowy</td>
+                            </tr>
+                            <tr class="border-b border-stone/10">
+                                <td class="py-2 pr-4">Uwierzytelnienie (logowanie)</td>
+                                <td class="py-2">Art. 6(1)(b) RODO — wykonanie umowy</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 pr-4">Analityka i poprawa usługi</td>
+                                <td class="py-2">Art. 6(1)(f) RODO — uzasadniony interes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
+            <!-- 4. Retencja -->
             <section class="mb-10">
                 <h2 class="font-display text-xl mb-4 text-espresso">4. Jak długo przechowujemy dane</h2>
+                <ul class="list-disc pl-6 space-y-2 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    <li><strong class="text-espresso">Formularz zapisu</strong> — do momentu wycofania zgody lub 12 miesięcy od zapisu, jeśli nie skorzystasz z usługi</li>
+                    <li><strong class="text-espresso">Dane z ankiety</strong> — przez czas trwania współpracy, a następnie przez okres wymagany przepisami prawa (np. obowiązki podatkowe — do 5 lat)</li>
+                    <li><strong class="text-espresso">Nagranie wideo</strong> — przez czas trwania projektu stylizacyjnego; po zakończeniu usuwane w ciągu 90 dni</li>
+                    <li><strong class="text-espresso">Dane uwierzytelniania</strong> — do momentu usunięcia konta</li>
+                </ul>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
-                    Twoje dane przechowujemy do momentu wycofania zgody lub zakończenia współpracy,
-                    a następnie przez okres wymagany przepisami prawa (np. obowiązki podatkowe).
-                    Jeśli zapiszesz się na listę i nie skorzystasz z usługi, usuniemy Twoje dane
-                    w ciągu 12 miesięcy od zapisu — chyba że wcześniej poprosisz o usunięcie.
+                    Możesz w każdej chwili poprosić o usunięcie swoich danych — napisz na
+                    <a href="mailto:hello@refl.pl" class="text-brass underline underline-offset-2 hover:text-brass-dark transition-colors">hello@refl.pl</a>.
                 </p>
             </section>
 
+            <!-- 5. Udostępnianie -->
             <section class="mb-10">
                 <h2 class="font-display text-xl mb-4 text-espresso">5. Komu udostępniamy dane</h2>
+
+                <h3 class="text-base font-semibold text-espresso mb-3">5.1 Podmioty przetwarzające</h3>
+                <div class="overflow-x-auto mb-4">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="border-b border-stone/30 text-espresso">
+                                <th class="pb-2 pr-4 font-semibold">Podmiot</th>
+                                <th class="pb-2 pr-4 font-semibold">Cel</th>
+                                <th class="pb-2 font-semibold">Lokalizacja</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-warm-gray">
+                            <tr class="border-b border-stone/10">
+                                <td class="py-2 pr-4 font-medium text-espresso">Supabase</td>
+                                <td class="py-2 pr-4">Uwierzytelnienie, baza danych, wideo</td>
+                                <td class="py-2">USA/Singapur (SCC)</td>
+                            </tr>
+                            <tr class="border-b border-stone/10">
+                                <td class="py-2 pr-4 font-medium text-espresso">Airtable</td>
+                                <td class="py-2 pr-4">System CRM</td>
+                                <td class="py-2">USA (SCC)</td>
+                            </tr>
+                            <tr class="border-b border-stone/10">
+                                <td class="py-2 pr-4 font-medium text-espresso">Vercel</td>
+                                <td class="py-2 pr-4">Hosting</td>
+                                <td class="py-2">USA (SCC)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 pr-4 font-medium text-espresso">Resend</td>
+                                <td class="py-2 pr-4">Wysyłka emaili</td>
+                                <td class="py-2">USA (SCC)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-base font-semibold text-espresso mb-3 mt-6">5.2 Stylistki</h3>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
-                    Twoje dane mogą być przekazywane następującym podmiotom:
+                    W celu realizacji usługi Twoje dane stylistyczne (preferencje, wymiary, wideo, budżet)
+                    są udostępniane stylistce przypisanej do Twojego projektu.
                 </p>
+                <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    Stylistki mogą znajdować się w <strong class="text-espresso">Wietnamie</strong> (Ho Chi Minh City).
+                    Wietnam nie posiada decyzji Komisji Europejskiej o adekwatności ochrony danych.
+                    Transfer odbywa się na podstawie Twojej wyraźnej zgody (art. 49(1)(a) RODO)
+                    wyrażonej przy wysłaniu ankiety oraz zobowiązań umownych stylistek do ochrony danych.
+                </p>
+
+                <h3 class="text-base font-semibold text-espresso mb-3 mt-6">5.3 Czego NIE robimy</h3>
                 <ul class="list-disc pl-6 space-y-2 text-[0.9375rem] text-warm-gray leading-relaxed">
-                    <li><strong class="text-espresso">Airtable</strong> — przechowywanie danych z formularza (Formagrid Inc., San Francisco, USA — zgodnie ze standardowymi klauzulami umownymi)</li>
-                    <li><strong class="text-espresso">Vercel</strong> — hosting strony internetowej (przetwarzanie w USA, zgodnie ze standardowymi klauzulami umownymi)</li>
+                    <li><strong class="text-espresso">Nie sprzedajemy</strong> Twoich danych osobowych. Nigdy.</li>
+                    <li><strong class="text-espresso">Nie udostępniamy</strong> danych reklamodawcom ani sieciom reklamowym.</li>
+                    <li><strong class="text-espresso">Nie profilujemy</strong> Ciebie w sposób zautomatyzowany w celach marketingowych.</li>
                 </ul>
-                <p class="text-[0.9375rem] text-warm-gray leading-relaxed mt-4">
-                    Nie sprzedajemy Twoich danych osobowych. Nigdy.
-                </p>
             </section>
 
+            <!-- 6. Prawa -->
             <section class="mb-10">
                 <h2 class="font-display text-xl mb-4 text-espresso">6. Twoje prawa</h2>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
@@ -97,31 +219,86 @@ import Layout from "../layouts/Layout.astro";
                 <ul class="list-disc pl-6 space-y-2 text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
                     <li><strong class="text-espresso">Dostępu</strong> — możesz zapytać, jakie dane o Tobie przechowujemy</li>
                     <li><strong class="text-espresso">Sprostowania</strong> — możesz poprosić o poprawienie nieprawidłowych danych</li>
-                    <li><strong class="text-espresso">Usunięcia</strong> — możesz poprosić o usunięcie swoich danych ("prawo do bycia zapomnianym")</li>
+                    <li><strong class="text-espresso">Usunięcia</strong> — możesz poprosić o usunięcie swoich danych</li>
                     <li><strong class="text-espresso">Ograniczenia przetwarzania</strong> — możesz poprosić o ograniczenie sposobu przetwarzania</li>
-                    <li><strong class="text-espresso">Przenoszenia</strong> — możesz poprosić o przekazanie danych w formacie maszynowym</li>
+                    <li><strong class="text-espresso">Przenoszenia danych</strong> — możesz poprosić o przekazanie danych w formacie maszynowym</li>
+                    <li><strong class="text-espresso">Sprzeciwu</strong> — wobec przetwarzania opartego na uzasadnionym interesie</li>
                     <li><strong class="text-espresso">Wycofania zgody</strong> — w dowolnym momencie, bez wpływu na legalność wcześniejszego przetwarzania</li>
-                    <li><strong class="text-espresso">Skargi</strong> — do Prezesa Urzędu Ochrony Danych Osobowych (PUODO)</li>
+                    <li><strong class="text-espresso">Skargi</strong> — do Prezesa Urzędu Ochrony Danych Osobowych (<a href="https://uodo.gov.pl" target="_blank" rel="noopener noreferrer" class="text-brass underline underline-offset-2 hover:text-brass-dark transition-colors">uodo.gov.pl</a>)</li>
                 </ul>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
-                    Aby skorzystać z powyższych praw, napisz do nas na
+                    Aby skorzystać z powyższych praw, napisz na
                     <a href="mailto:hello@refl.pl" class="text-brass underline underline-offset-2 hover:text-brass-dark transition-colors">hello@refl.pl</a>.
                     Odpowiemy w ciągu 30 dni.
                 </p>
             </section>
 
+            <!-- 7. Cookies -->
             <section class="mb-10">
                 <h2 class="font-display text-xl mb-4 text-espresso">7. Pliki cookies</h2>
+
+                <h3 class="text-base font-semibold text-espresso mb-3">refl.pl</h3>
+                <p class="text-[0.9375rem] text-warm-gray leading-relaxed mb-4">
+                    Strona korzysta wyłącznie z niezbędnych plików cookies
+                    oraz Vercel Web Analytics, która nie wykorzystuje cookies
+                    i nie zbiera danych osobowych.
+                </p>
+
+                <h3 class="text-base font-semibold text-espresso mb-3 mt-6">app.refl.pl</h3>
+                <div class="overflow-x-auto mb-4">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="border-b border-stone/30 text-espresso">
+                                <th class="pb-2 pr-4 font-semibold">Cookie</th>
+                                <th class="pb-2 pr-4 font-semibold">Cel</th>
+                                <th class="pb-2 font-semibold">Czas życia</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-warm-gray">
+                            <tr class="border-b border-stone/10">
+                                <td class="py-2 pr-4 font-mono text-xs">sb-*-auth-token</td>
+                                <td class="py-2 pr-4">Sesja logowania</td>
+                                <td class="py-2">Do wylogowania</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 pr-4 font-mono text-xs">locale</td>
+                                <td class="py-2 pr-4">Preferencja językowa</td>
+                                <td class="py-2">1 rok</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
-                    Strona refl.pl korzysta wyłącznie z niezbędnych plików cookies
-                    oraz analityki Vercel Web Analytics, która nie wykorzystuje cookies
-                    i nie zbiera danych osobowych. Nie stosujemy cookies marketingowych
-                    ani śledzących.
+                    Nie stosujemy cookies marketingowych, śledzących ani profilujących.
                 </p>
             </section>
 
+            <!-- 8. Bezpieczeństwo -->
             <section class="mb-10">
-                <h2 class="font-display text-xl mb-4 text-espresso">8. Zmiany w polityce</h2>
+                <h2 class="font-display text-xl mb-4 text-espresso">8. Bezpieczeństwo danych</h2>
+                <ul class="list-disc pl-6 space-y-2 text-[0.9375rem] text-warm-gray leading-relaxed">
+                    <li>Szyfrowanie transmisji (HTTPS/TLS) na obu stronach</li>
+                    <li>Uwierzytelnianie bezhasłowe (magic link) — brak ryzyka wycieku haseł</li>
+                    <li>Kontrola dostępu na poziomie wierszy (RLS) w bazie danych</li>
+                    <li>Podpisane, czasowo ograniczone linki do plików wideo</li>
+                    <li>Dostęp do panelu CRM tylko dla upoważnionych osób</li>
+                </ul>
+            </section>
+
+            <!-- 9. Niepełnoletni -->
+            <section class="mb-10">
+                <h2 class="font-display text-xl mb-4 text-espresso">9. Osoby niepełnoletnie</h2>
+                <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
+                    Usługa REFL. jest skierowana do osób pełnoletnich (18+). Nie zbieramy
+                    świadomie danych osób poniżej 18 roku życia. Jeśli uważasz, że osoba
+                    niepełnoletnia przekazała nam swoje dane, napisz na
+                    <a href="mailto:hello@refl.pl" class="text-brass underline underline-offset-2 hover:text-brass-dark transition-colors">hello@refl.pl</a>.
+                </p>
+            </section>
+
+            <!-- 10. Zmiany -->
+            <section class="mb-10">
+                <h2 class="font-display text-xl mb-4 text-espresso">10. Zmiany w polityce</h2>
                 <p class="text-[0.9375rem] text-warm-gray leading-relaxed">
                     Możemy aktualizować niniejszą politykę prywatności. O istotnych zmianach
                     poinformujemy przez email lub komunikat na stronie. Data ostatniej
@@ -144,7 +321,7 @@ import Layout from "../layouts/Layout.astro";
                 <span class="text-[1.75rem] text-brass font-light">✦</span>
                 <span class="font-display text-[1.375rem] font-medium text-sand">REFL.</span>
             </a>
-            <span class="text-xs text-taupe">&copy; 2026 REFL. Projekt w fazie walidacji.</span>
+            <span class="text-xs text-taupe">&copy; 2026 REFL. Wszelkie prawa zastrzeżone.</span>
         </div>
     </footer>
 </Layout>

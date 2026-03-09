@@ -143,31 +143,14 @@ import NotQualifiedModal from '../components/NotQualifiedModal.astro';
       }
     });
 
-    // --- Preorder interest (tag in GetResponse) ---
-    document.getElementById('preorder-interest-btn')?.addEventListener('click', async () => {
-      const btn = document.getElementById('preorder-interest-btn') as HTMLButtonElement;
-      btn.disabled = true;
-      btn.textContent = 'Zapisuję...';
-
-      try {
-        const res = await fetch('/api/tag-preorder', {
+    // --- Tag preorder interest when user clicks through to questionnaire ---
+    document.getElementById('preorder-interest-btn')?.addEventListener('click', () => {
+      if (submittedEmail) {
+        fetch('/api/tag-preorder', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: submittedEmail }),
         });
-
-        if (res.ok) {
-          btn.textContent = 'Gotowe! Odezwiemy się ✓';
-          btn.classList.remove('bg-brass', 'hover:bg-brass-dark');
-          btn.classList.add('bg-success');
-          setTimeout(() => hideModal('modal-qualified'), 2000);
-        } else {
-          btn.disabled = false;
-          btn.textContent = 'Chcę zarezerwować miejsce';
-        }
-      } catch {
-        btn.disabled = false;
-        btn.textContent = 'Chcę zarezerwować miejsce';
       }
     });
   </script>
